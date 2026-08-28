@@ -1,0 +1,14 @@
+{
+  "name": "playwright-versions",
+  "version": "0.0.1",
+  "description": "List of the browser versions supported by Playwright releases.",
+  "main": "index.mjs",
+  "scripts": {
+    "update": "node update-browsers-list.mjs",
+    "update:dry-run": "node update-browsers-list.mjs --dry-run"
+  },
+  "keywords": ["playwright", "browsers", "versions", "chromium", "firefox", "webkit"],
+  "author": "Aniruthan Mala Elangovan (Barremian) <hello@barremian.com>",
+  "license": "AGPL-3.0-only",
+  "type": "module"
+}
