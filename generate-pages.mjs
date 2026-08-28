@@ -46,9 +46,20 @@ function renderHtml({ table, versionCount, latest }) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Playwright browsers list</title>
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <script>
+    (() => {
+      const stored = localStorage.getItem('theme');
+      const theme = stored === 'dark' || stored === 'light'
+        ? stored
+        : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
   <style>
     :root {
-      color-scheme: light dark;
+      color-scheme: light;
       --bg: #f4f1ea;
       --surface: #fffdf8;
       --ink: #1c1916;
@@ -56,24 +67,31 @@ function renderHtml({ table, versionCount, latest }) {
       --line: #d8d0c4;
       --accent: #2f6f4e;
       --head: #2b2621;
+      --head-ink: #f4f1ea;
       --stripe: #f7f1e7;
+      --font: Inter, system-ui, sans-serif;
+      font-family: var(--font);
+      font-feature-settings: "liga" 1, "calt" 1;
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #161412;
-        --surface: #201c18;
-        --ink: #f3eee6;
-        --muted: #b7aea2;
-        --line: #3b342c;
-        --accent: #8fceaa;
-        --head: #f3eee6;
-        --stripe: #1a1714;
-      }
+    @supports (font-variation-settings: normal) {
+      :root { --font: InterVariable, Inter, system-ui, sans-serif; }
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #161412;
+      --surface: #201c18;
+      --ink: #f3eee6;
+      --muted: #b7aea2;
+      --line: #3b342c;
+      --accent: #8fceaa;
+      --head: #f3eee6;
+      --head-ink: #161412;
+      --stripe: #1a1714;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      font-family: var(--font);
       background: var(--bg);
       color: var(--ink);
       line-height: 1.5;
@@ -84,6 +102,12 @@ function renderHtml({ table, versionCount, latest }) {
       border-bottom: 1px solid var(--line);
     }
     footer { border-bottom: 0; border-top: 1px solid var(--line); color: var(--muted); }
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
     h1 {
       margin: 0 0 0.35rem;
       font-size: clamp(1.6rem, 3vw, 2.2rem);
@@ -91,6 +115,28 @@ function renderHtml({ table, versionCount, latest }) {
     }
     .lede, footer p { margin: 0; }
     .meta { color: var(--muted); margin: 0 0 1rem; }
+    .theme-switch {
+      display: inline-flex;
+      flex-shrink: 0;
+      border: 1px solid var(--line);
+      border-radius: 0.4rem;
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .theme-switch button {
+      appearance: none;
+      border: 0;
+      margin: 0;
+      padding: 0.4rem 0.75rem;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      cursor: pointer;
+    }
+    .theme-switch button[aria-pressed="true"] {
+      background: var(--head);
+      color: var(--head-ink);
+    }
     label { display: block; max-width: 28rem; }
     .visually-hidden {
       position: absolute;
@@ -124,7 +170,7 @@ function renderHtml({ table, versionCount, latest }) {
       border-spacing: 0;
       width: max-content;
       min-width: 100%;
-      font-family: "Source Sans 3", "Segoe UI", sans-serif;
+      font-family: var(--font);
       font-size: 0.92rem;
     }
     th, td {
@@ -140,7 +186,7 @@ function renderHtml({ table, versionCount, latest }) {
       top: 0;
       z-index: 2;
       background: var(--head);
-      color: var(--bg);
+      color: var(--head-ink);
       text-align: left;
     }
     tbody tr:nth-child(10n + 1),
@@ -155,8 +201,16 @@ function renderHtml({ table, versionCount, latest }) {
 </head>
 <body>
   <header>
-    <h1>Playwright browsers list</h1>
-    <p class="lede">Browser versions bundled with each Playwright release.</p>
+    <div class="header-row">
+      <div>
+        <h1>Playwright browsers list</h1>
+        <p class="lede">Browser versions bundled with each Playwright release.</p>
+      </div>
+      <div class="theme-switch" role="group" aria-label="Color theme">
+        <button type="button" data-theme-value="light">Light</button>
+        <button type="button" data-theme-value="dark">Dark</button>
+      </div>
+    </div>
     <p class="meta">${versionCount} recorded release${versionCount === 1 ? '' : 's'}, latest <strong>${latestLabel}</strong>.</p>
     <label>
       <span class="visually-hidden">Filter releases</span>
@@ -173,6 +227,23 @@ ${table}
     <p>Generated from <code>playwright-browsers-list.md</code> on the <code>develop</code> branch.</p>
   </footer>
   <script>
+    const root = document.documentElement;
+    const themeButtons = document.querySelectorAll('[data-theme-value]');
+    const applyTheme = theme => {
+      root.dataset.theme = theme;
+      for (const button of themeButtons) {
+        button.setAttribute('aria-pressed', String(button.dataset.themeValue === theme));
+      }
+    };
+    applyTheme(root.dataset.theme === 'dark' ? 'dark' : 'light');
+    for (const button of themeButtons) {
+      button.addEventListener('click', () => {
+        const theme = button.dataset.themeValue;
+        localStorage.setItem('theme', theme);
+        applyTheme(theme);
+      });
+    }
+
     const input = document.getElementById('filter');
     const empty = document.getElementById('empty');
     const tableWrap = document.querySelector('.table-wrap');
