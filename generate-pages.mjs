@@ -164,10 +164,10 @@ function renderHtml({ table, versionCount, latest }) {
     </label>
   </header>
   <main>
+    <p id="empty" hidden>No releases match that filter.</p>
     <div class="table-wrap">
 ${table}
     </div>
-    <p id="empty" hidden>No releases match that filter.</p>
   </main>
   <footer>
     <p>Generated from <code>playwright-browsers-list.md</code> on the <code>develop</code> branch.</p>
@@ -175,6 +175,7 @@ ${table}
   <script>
     const input = document.getElementById('filter');
     const empty = document.getElementById('empty');
+    const tableWrap = document.querySelector('.table-wrap');
     const groups = [];
     let current = null;
     for (const row of document.querySelectorAll('tbody tr')) {
@@ -196,6 +197,7 @@ ${table}
         if (show) visible += 1;
       }
       empty.hidden = visible !== 0;
+      tableWrap.hidden = visible === 0;
     });
   </script>
 </body>

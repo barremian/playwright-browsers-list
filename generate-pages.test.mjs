@@ -22,6 +22,7 @@ test('writes index.html as the site root from the browsers table', () => {
   assert.match(html, /<table>/);
   assert.match(html, /<strong>v1\.62\.1<\/strong>/);
   assert.match(html, /id="filter"/);
+  assert.ok(html.indexOf('id="empty"') < html.indexOf('class="table-wrap"'));
   assert.equal(fs.readFileSync(path.join(siteDir, '.nojekyll'), 'utf-8'), '');
 });
 
