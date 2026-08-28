@@ -1,0 +1,57 @@
+name: Update browser list
+
+on:
+  schedule:
+    # Daily at 06:00 UTC. No pull request is opened when nothing changed.
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: update-browsers-list
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          ref: develop
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+
+      - name: Refresh Playwright browser list
+        run: npm run update
+
+      - name: Open pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v8
+        with:
+          base: develop
+          branch: chore/update-browsers-list
+          delete-branch: true
+          sign-commits: true
+          add-paths: |
+            playwright-tags.json
+            playwright-browsers-list.md
+          commit-message: 'chore: update Playwright browser list'
+          title: 'chore: update Playwright browser list'
+          body: |
+            Automated refresh of Playwright browser versions from new `microsoft/playwright` tags.
+
+            Review the diff in `playwright-tags.json` and `playwright-browsers-list.md` before merging.
+
+            This pull request is created by the [Update browser list](../actions/workflows/update-browsers-list.yml) workflow.
+
+      - name: Summarize pull request
+        if: steps.cpr.outputs.pull-request-number
+        run: |
+          echo "PR ${{ steps.cpr.outputs.pull-request-operation }}: ${{ steps.cpr.outputs.pull-request-url }}"
