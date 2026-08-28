@@ -5,7 +5,9 @@
   "main": "index.mjs",
   "scripts": {
     "update": "node update-browsers-list.mjs",
-    "update:dry-run": "node update-browsers-list.mjs --dry-run"
+    "update:dry-run": "node update-browsers-list.mjs --dry-run",
+    "pages": "node generate-pages.mjs",
+    "test": "node --test generate-pages.test.mjs"
   },
   "keywords": ["playwright", "browsers", "versions", "chromium", "firefox", "webkit"],
   "author": "Aniruthan Mala Elangovan (Barremian) <hello@barremian.com>",
