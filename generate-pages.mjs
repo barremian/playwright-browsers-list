@@ -427,6 +427,9 @@ function renderHtml({ releases, versionCount, latest }) {
     }
     header h1 {
       margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       font-size: 1rem;
       font-weight: 600;
       letter-spacing: 0;
@@ -665,7 +668,8 @@ function renderHtml({ releases, versionCount, latest }) {
     .details-cell ul { margin: 0.15rem 0 0; padding-left: 1.1rem; }
     @media (max-width: 52rem) {
       .top-nav, header .slash, header .tagline { display: none; }
-      #filter { width: 8rem; }
+      #filter { width: 6.5rem; }
+      header .right { gap: 0.35rem; }
     }
   </style>
 </head>
