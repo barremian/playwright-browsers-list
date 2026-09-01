@@ -632,14 +632,15 @@ function renderHtml({ releases, versionCount, latest }) {
     }
     .expand[aria-expanded="true"] .chevron { transform: rotate(45deg); }
     .browser-cell { line-height: 1.2; }
-    .ver { display: block; font-weight: 500; }
+    .ver { display: block; font-weight: 500; padding-left: 0.4rem; }
     .rev, .badge, .details-label {
       display: block;
       color: var(--faint);
       font-size: 0.75rem;
     }
+    .rev { padding-left: 0.4rem; }
     .badge { display: inline; margin-left: 0.35rem; text-transform: uppercase; }
-    td.changed .ver { box-shadow: inset 2px 0 0 var(--accent); padding-left: 0.4rem; }
+    td.changed .ver { box-shadow: inset 2px 0 0 var(--accent); }
     tr.details td {
       height: auto;
       white-space: normal;

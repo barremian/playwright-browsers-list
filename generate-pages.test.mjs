@@ -168,6 +168,8 @@ test('renders one row per fixture release, newest first, with extras hidden by c
   assert.match(html, /optional/);
   assert.match(html, /mac12: 300/);
   assert.match(html, /td class="browser-cell changed"/);
+  assert.match(html, /\.ver \{ display: block; font-weight: 500; padding-left: 0\.4rem; \}/);
+  assert.match(html, /\.rev \{ padding-left: 0\.4rem; \}/);
 });
 
 test('rejects a source file that is not an HTML table', () => {
