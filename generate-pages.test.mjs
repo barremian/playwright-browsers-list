@@ -109,8 +109,11 @@ test('writes a models.dev-style index from the browsers table', () => {
   assert.equal(path.basename(output), 'index.html');
   const html = fs.readFileSync(output, 'utf-8');
   assert.match(html, /^<!DOCTYPE html>/);
-  assert.match(html, /<title>Playwright browsers list<\/title>/);
-  assert.match(html, /<h1>Playwright browsers<\/h1>/);
+  assert.match(html, /<title>Playwright Browsers<\/title>/);
+  assert.match(html, /<h1>Playwright Browsers<\/h1>/);
+  assert.match(html, /rel="icon"[^>]*lucide-static@1\.39\.0\/icons\/drama\.svg/);
+  assert.doesNotMatch(html, /Playwright browsers list/);
+  assert.doesNotMatch(html, /<h1>Playwright browsers<\/h1>/);
   assert.doesNotMatch(html, /class="top-nav"/);
   assert.doesNotMatch(html, /github.com\/microsoft\/playwright/);
   assert.doesNotMatch(html, /playwright.dev\/docs\/browsers/);
