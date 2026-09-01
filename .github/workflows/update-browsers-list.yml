@@ -31,6 +31,9 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Check Playwright CDN contract
+        run: pnpm test
+
       - name: Refresh Playwright browser list
         run: pnpm run update
 
@@ -49,6 +52,10 @@ jobs:
           title: 'chore: update Playwright browser list'
           body: |
             Automated refresh of Playwright browser versions from new `microsoft/playwright` tags.
+
+            This workflow also runs the Playwright CDN canary. If hosts or path templates
+            in `microsoft/playwright` drifted, the job fails before opening a pull request;
+            update `playwright-download-registry.json` in that case.
 
             Review the diff in `playwright-tags.json` and `playwright-browsers-list.md` before merging.
 

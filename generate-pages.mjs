@@ -7,10 +7,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { loadDownloadRegistry } from './download-registry.mjs';
+import { downloadLinks } from './download-urls.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const TABLE_FILE = path.join(ROOT, 'playwright-browsers-list.md');
 const SITE_DIR = path.join(ROOT, '_site');
+const DOWNLOAD_REGISTRY = loadDownloadRegistry();
 
 const REPO_URL = 'https://github.com/barremian/playwright-browsers-list';
 const LUCIDE_ICON = name => `https://cdn.jsdelivr.net/npm/lucide-static@1.39.0/icons/${name}.svg`;
@@ -272,8 +275,36 @@ function renderDetailsCell(browser) {
       .join('');
     parts.push(`<div><span class="k">Overrides</span><ul>${items}</ul></div>`);
   }
+  const downloads = renderDownloadLinks(browser);
+  if (downloads)
+    parts.push(downloads);
   const body = parts.length ? parts.join('') : '–';
   return `<td class="details-cell${extraClass}">${body}</td>`;
+}
+
+function renderDownloadLinks(browser) {
+  const links = downloadLinks(browser, DOWNLOAD_REGISTRY);
+  if (!links.length)
+    return '';
+
+  const groups = new Map();
+  for (const link of links) {
+    const items = groups.get(link.group) ?? [];
+    items.push(link);
+    groups.set(link.group, items);
+  }
+
+  const sections = [...groups.entries()].map(([group, items]) => {
+    const list = items.map(link => {
+      const title = link.fallbacks.length
+        ? ` title="${escapeHtml([link.href, ...link.fallbacks].join('\n'))}"`
+        : '';
+      return `<li><a href="${escapeHtml(link.href)}" rel="noopener noreferrer"${title}>${escapeHtml(link.platform)}</a></li>`;
+    }).join('');
+    return `<div class="download-group"><span class="download-os">${escapeHtml(group)}</span><ul>${list}</ul></div>`;
+  }).join('');
+
+  return `<div class="downloads"><span class="k">Downloads</span>${sections}</div>`;
 }
 
 function searchText(release, columns) {
@@ -289,6 +320,7 @@ function searchText(release, columns) {
       browser.revision ?? '',
       browser.title ?? '',
       ...browser.revisionOverrides.flatMap(item => [item.platform, item.revision]),
+      ...downloadLinks(browser, DOWNLOAD_REGISTRY).flatMap(link => [link.platform, link.group]),
     );
   }
   return parts.filter(Boolean).join(' ').toLowerCase();
@@ -351,6 +383,8 @@ function renderHtml({ releases, versionCount, latest }) {
       document.documentElement.dataset.theme = theme;
       if (localStorage.getItem('extras') === 'on')
         document.documentElement.dataset.extras = 'on';
+      if (/Mac|iP(hone|ad|od)/.test(navigator.userAgent))
+        document.documentElement.dataset.os = 'mac';
     })();
   </script>
   <style>
@@ -460,10 +494,23 @@ function renderHtml({ releases, versionCount, latest }) {
       white-space: nowrap;
       border: 0;
     }
+    .search {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+    .search .icon-search {
+      position: absolute;
+      left: 0.5rem;
+      color: var(--muted);
+      pointer-events: none;
+    }
     #filter {
-      width: 10.5rem;
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12.5rem;
       height: 2rem;
-      padding: 0 0.625rem;
+      padding: 0 1.75rem 0 1.875rem;
       border: 1px solid var(--line);
       border-radius: 0.25rem;
       background: transparent;
@@ -471,10 +518,70 @@ function renderHtml({ releases, versionCount, latest }) {
       font: inherit;
       font-size: 0.8125rem;
     }
+    #filter:placeholder-shown { padding-right: 3.25rem; }
     #filter:hover, #filter:focus {
       border-color: var(--accent);
       outline: none;
       background: var(--surface);
+    }
+    #filter::placeholder { color: var(--muted); }
+    #filter::-webkit-search-cancel-button,
+    #filter::-webkit-search-decoration,
+    #filter::-webkit-search-results-button,
+    #filter::-webkit-search-results-decoration {
+      -webkit-appearance: none;
+      appearance: none;
+      display: none;
+      width: 0;
+      height: 0;
+    }
+    .search-clear {
+      position: absolute;
+      top: 50%;
+      right: 0.25rem;
+      z-index: 1;
+      appearance: none;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: 0;
+      border: 0;
+      border-radius: 0.2rem;
+      background: transparent;
+      color: var(--muted);
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+    .search:has(#filter:not(:placeholder-shown)) .search-clear { display: inline-flex; }
+    .search-clear:hover { color: var(--ink); }
+    .search-keys {
+      position: absolute;
+      right: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+      color: var(--faint);
+      font: inherit;
+      font-size: 0.6875rem;
+      font-weight: 400;
+      pointer-events: none;
+    }
+    .search-keys-mac {
+      display: none;
+      align-items: center;
+      gap: 0.15rem;
+    }
+    .search-keys-mac .icon {
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+    :root[data-os="mac"] .search-keys-pc { display: none; }
+    :root[data-os="mac"] .search-keys-mac { display: inline-flex; }
+    .search:focus-within .search-keys,
+    .search:has(#filter:not(:placeholder-shown)) .search-keys {
+      display: none;
     }
     .extras, .icon-link {
       appearance: none;
@@ -517,6 +624,9 @@ function renderHtml({ releases, versionCount, latest }) {
     }
     .icon-github { --icon: url("${GITHUB_ICON}"); }
     .icon-toolbox { --icon: url("${LUCIDE_ICON('toolbox')}"); }
+    .icon-search { --icon: url("${LUCIDE_ICON('search')}"); }
+    .icon-command { --icon: url("${LUCIDE_ICON('command')}"); }
+    .icon-x { --icon: url("${LUCIDE_ICON('x')}"); }
     .icon-sun { --icon: url("${LUCIDE_ICON('sun')}"); }
     .icon-moon { --icon: url("${LUCIDE_ICON('moon')}"); }
     .icon-monitor { --icon: url("${LUCIDE_ICON('monitor')}"); }
@@ -551,10 +661,16 @@ function renderHtml({ releases, versionCount, latest }) {
     .page-scroll {
       height: calc(100svh - var(--header-height));
       margin-top: var(--header-height);
+      overflow: hidden;
+    }
+    .table-section {
+      width: 100%;
+      height: 100%;
+    }
+    .table-wrap {
+      height: 100%;
       overflow: auto;
     }
-    .table-section { width: 100%; }
-    .table-wrap { overflow-x: auto; }
     #empty {
       display: none;
       padding: 1rem 0.75rem;
@@ -657,9 +773,20 @@ function renderHtml({ releases, versionCount, latest }) {
       text-transform: uppercase;
     }
     .details-cell ul { margin: 0.15rem 0 0; padding-left: 1.1rem; }
+    .details-cell .downloads { margin-top: 0.45rem; }
+    .details-cell .download-group { margin-top: 0.3rem; }
+    .details-cell .download-os {
+      display: block;
+      color: var(--faint);
+      font-size: 0.6875rem;
+    }
+    .details-cell .downloads a { color: var(--ink); }
+    .details-cell .downloads a:hover { color: var(--accent); }
     @media (max-width: 52rem) {
       header .slash, header .tagline { display: none; }
-      #filter { width: 6.5rem; }
+      #filter { width: 7.5rem; }
+      #filter:placeholder-shown { padding-right: 0.5rem; }
+      .search-keys { display: none; }
       header .right { gap: 0.35rem; }
     }
   </style>
@@ -672,9 +799,17 @@ function renderHtml({ releases, versionCount, latest }) {
       <p class="tagline">${versionCount} releases · latest ${latestLabel}</p>
     </div>
     <div class="right">
-      <label>
-        <span class="visually-hidden">Filter releases</span>
-        <input type="search" id="filter" placeholder="Filter versions…" autocomplete="off">
+      <label class="search">
+        <span class="visually-hidden">Search releases</span>
+        <span class="icon icon-search" aria-hidden="true"></span>
+        <input type="search" id="filter" placeholder="Search" autocomplete="off" aria-keyshortcuts="Control+F Meta+F">
+        <button type="button" class="search-clear" aria-label="Clear search">
+          <span class="icon icon-x" aria-hidden="true"></span>
+        </button>
+        <kbd class="search-keys" aria-hidden="true">
+          <span class="search-keys-pc">Ctrl F</span>
+          <span class="search-keys-mac"><span class="icon icon-command"></span>F</span>
+        </kbd>
       </label>
       <button type="button" class="extras" id="extras" aria-pressed="false">
         <span class="icon icon-toolbox" aria-hidden="true"></span>
@@ -773,6 +908,18 @@ ${table}
       section.toggleAttribute('data-empty', visible === 0);
     };
     input.addEventListener('input', filterGroups);
+    document.querySelector('.search-clear').addEventListener('click', () => {
+      input.value = '';
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+      input.focus();
+    });
+    document.addEventListener('keydown', event => {
+      if ((event.ctrlKey || event.metaKey) && !event.altKey && event.key.toLowerCase() === 'f') {
+        event.preventDefault();
+        input.focus();
+        input.select();
+      }
+    });
 
     tbody.addEventListener('click', event => {
       const button = event.target.closest('.expand');
