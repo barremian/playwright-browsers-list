@@ -115,6 +115,12 @@ test('writes a models.dev-style index from the browsers table', () => {
   assert.match(html, /github.com\/microsoft\/playwright/);
   assert.match(html, /playwright.dev\/docs\/browsers/);
   assert.match(html, /github.com\/barremian\/playwright-browsers-list/);
+  assert.match(html, /class="icon-link"/);
+  assert.match(html, /aria-label="GitHub repository"/);
+  assert.match(html, /cdn\.jsdelivr\.net\/npm\/simple-icons@16\.24\.1\/icons\/github\.svg/);
+  assert.match(html, /cdn\.jsdelivr\.net\/npm\/lucide-static@1\.39\.0\/icons\/sun\.svg/);
+  assert.match(html, /cdn\.jsdelivr\.net\/npm\/lucide-static@1\.39\.0\/icons\/moon\.svg/);
+  assert.match(html, /cdn\.jsdelivr\.net\/npm\/lucide-static@1\.39\.0\/icons\/monitor\.svg/);
   assert.match(html, /id="filter"/);
   assert.match(html, /id="extras"/);
   assert.match(html, /InterVariable/);
@@ -125,6 +131,10 @@ test('writes a models.dev-style index from the browsers table', () => {
   assert.match(html, /:root\[data-theme="dark"\]/);
   assert.match(html, /data-theme-value="light"/);
   assert.match(html, /data-theme-value="dark"/);
+  assert.match(html, /data-theme-value="system"/);
+  assert.doesNotMatch(html, />GitHub</);
+  assert.doesNotMatch(html, />Light</);
+  assert.doesNotMatch(html, />Dark</);
   assert.match(html, /class="page-scroll"/);
   assert.ok(html.indexOf('id="empty"') < html.indexOf('class="table-wrap"'));
   assert.match(html, /<strong>v1\.62\.1<\/strong>/);
