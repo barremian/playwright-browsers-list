@@ -118,6 +118,10 @@ test('writes a models.dev-style index from the browsers table', () => {
   assert.match(html, /id="filter"/);
   assert.match(html, /id="extras"/);
   assert.match(html, /InterVariable/);
+  assert.match(html, /--accent: #fd9527/);
+  assert.match(html, /--bg: #fff;/);
+  assert.match(html, /--bg: #1e1e1e;/);
+  assert.doesNotMatch(html, /#f4f1ea|#fffdf8|#2f6f4e|#161412/);
   assert.match(html, /:root\[data-theme="dark"\]/);
   assert.match(html, /data-theme-value="light"/);
   assert.match(html, /data-theme-value="dark"/);

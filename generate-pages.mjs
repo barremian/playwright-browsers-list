@@ -355,13 +355,15 @@ function renderHtml({ releases, versionCount, latest }) {
     :root {
       color-scheme: light;
       --header-height: 56px;
-      --bg: #f4f1ea;
-      --surface: #fffdf8;
-      --ink: #1c1916;
-      --muted: #5c564e;
-      --line: #d8d0c4;
-      --accent: #2f6f4e;
-      --head: #fffdf8cc;
+      --bg: #fff;
+      --surface: #f5f5f5;
+      --ink: #333;
+      --invert: #fff;
+      --muted: #666;
+      --faint: #999;
+      --line: #ddd;
+      --accent: #fd9527;
+      --head: rgba(255, 255, 255, 0.84);
       --font: Inter, system-ui, sans-serif;
       font-family: var(--font);
       font-feature-settings: "liga" 1, "calt" 1;
@@ -371,13 +373,15 @@ function renderHtml({ releases, versionCount, latest }) {
     }
     :root[data-theme="dark"] {
       color-scheme: dark;
-      --bg: #161412;
-      --surface: #201c18;
-      --ink: #f3eee6;
-      --muted: #b7aea2;
-      --line: #3b342c;
-      --accent: #8fceaa;
-      --head: #201c18d6;
+      --bg: #1e1e1e;
+      --surface: #111;
+      --ink: #fff;
+      --invert: #333;
+      --muted: #aaa;
+      --faint: #666;
+      --line: #333;
+      --accent: #fd9527;
+      --head: rgba(30, 30, 30, 0.84);
     }
     * { box-sizing: border-box; }
     html, body {
@@ -437,7 +441,7 @@ function renderHtml({ releases, versionCount, latest }) {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: var(--muted);
+      color: var(--faint);
       font-size: 0.8125rem;
     }
     .top-nav {
@@ -494,10 +498,14 @@ function renderHtml({ releases, versionCount, latest }) {
       font-size: 0.8125rem;
       cursor: pointer;
     }
-    .extras[aria-pressed="true"],
+    .extras[aria-pressed="true"] {
+      background: var(--accent);
+      color: var(--invert);
+      border-color: var(--accent);
+    }
     .theme-switch button[aria-pressed="true"] {
       background: var(--ink);
-      color: var(--bg);
+      color: var(--invert);
       border-color: var(--ink);
     }
     .theme-switch { display: inline-flex; gap: 0.25rem; }
@@ -543,7 +551,7 @@ function renderHtml({ releases, versionCount, latest }) {
       font-size: 0.75rem;
       font-weight: 400;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--faint);
     }
     th.sortable { cursor: pointer; user-select: none; }
     .sort-indicator {
@@ -561,7 +569,7 @@ function renderHtml({ releases, versionCount, latest }) {
       z-index: 5;
       background: var(--head);
     }
-    tbody td { color: var(--muted); }
+    tbody td { color: var(--faint); }
     tbody td:first-child, tbody .ver { color: var(--ink); }
     tbody tr.release:hover td { background: var(--surface); }
     tbody tr.release:hover .version-cell { background: var(--surface); }
@@ -588,7 +596,7 @@ function renderHtml({ releases, versionCount, latest }) {
     .ver { display: block; font-weight: 500; }
     .rev, .badge, .details-label {
       display: block;
-      color: var(--muted);
+      color: var(--faint);
       font-size: 0.75rem;
     }
     .badge { display: inline; margin-left: 0.35rem; text-transform: uppercase; }
