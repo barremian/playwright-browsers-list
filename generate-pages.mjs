@@ -13,8 +13,6 @@ const TABLE_FILE = path.join(ROOT, 'playwright-browsers-list.md');
 const SITE_DIR = path.join(ROOT, '_site');
 
 const REPO_URL = 'https://github.com/barremian/playwright-browsers-list';
-const PLAYWRIGHT_URL = 'https://github.com/microsoft/playwright';
-const DOCS_URL = 'https://playwright.dev/docs/browsers';
 const LUCIDE_ICON = name => `https://cdn.jsdelivr.net/npm/lucide-static@1.39.0/icons/${name}.svg`;
 const GITHUB_ICON = 'https://cdn.jsdelivr.net/npm/simple-icons@16.24.1/icons/github.svg';
 
@@ -450,21 +448,6 @@ function renderHtml({ releases, versionCount, latest }) {
       color: var(--faint);
       font-size: 0.8125rem;
     }
-    .top-nav {
-      display: flex;
-      align-items: center;
-      gap: 0.125rem;
-      font-size: 0.8125rem;
-    }
-    .top-nav a {
-      padding: 0.375rem 0.5rem;
-      border-radius: 0.25rem;
-      color: var(--muted);
-    }
-    .top-nav a:hover {
-      color: var(--ink);
-      background: var(--surface);
-    }
     .visually-hidden {
       position: absolute;
       width: 1px;
@@ -667,7 +650,7 @@ function renderHtml({ releases, versionCount, latest }) {
     }
     .details-cell ul { margin: 0.15rem 0 0; padding-left: 1.1rem; }
     @media (max-width: 52rem) {
-      .top-nav, header .slash, header .tagline { display: none; }
+      header .slash, header .tagline { display: none; }
       #filter { width: 6.5rem; }
       header .right { gap: 0.35rem; }
     }
@@ -681,10 +664,6 @@ function renderHtml({ releases, versionCount, latest }) {
       <p class="tagline">${versionCount} releases · latest ${latestLabel}</p>
     </div>
     <div class="right">
-      <nav class="top-nav" aria-label="Primary">
-        <a href="${PLAYWRIGHT_URL}" target="_blank" rel="noopener noreferrer">Playwright</a>
-        <a href="${DOCS_URL}" target="_blank" rel="noopener noreferrer">Docs</a>
-      </nav>
       <label>
         <span class="visually-hidden">Filter releases</span>
         <input type="search" id="filter" placeholder="Filter versions…" autocomplete="off">

@@ -111,9 +111,9 @@ test('writes a models.dev-style index from the browsers table', () => {
   assert.match(html, /^<!DOCTYPE html>/);
   assert.match(html, /<title>Playwright browsers list<\/title>/);
   assert.match(html, /<h1>Playwright browsers<\/h1>/);
-  assert.match(html, /class="top-nav"/);
-  assert.match(html, /github.com\/microsoft\/playwright/);
-  assert.match(html, /playwright.dev\/docs\/browsers/);
+  assert.doesNotMatch(html, /class="top-nav"/);
+  assert.doesNotMatch(html, /github.com\/microsoft\/playwright/);
+  assert.doesNotMatch(html, /playwright.dev\/docs\/browsers/);
   assert.match(html, /github.com\/barremian\/playwright-browsers-list/);
   assert.match(html, /header h1 \{[\s\S]*text-overflow: ellipsis;/);
   assert.match(html, /class="icon-link"/);
