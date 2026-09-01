@@ -3,7 +3,7 @@
 // playwright-releases.json, fetches browsers.json for each new tag, and appends
 // the release to the catalog.
 //
-// Usage: node update-browsers-list.mjs [--dry-run]
+// Usage: node src/update-browsers-list.mjs [--dry-run]
 
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
@@ -18,7 +18,7 @@ import {
   writeReleasesJson,
 } from './releases.mjs';
 
-const ROOT = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const RELEASES_FILE = path.join(ROOT, 'playwright-releases.json');
 
 const PLAYWRIGHT_REPO = 'https://github.com/microsoft/playwright.git';

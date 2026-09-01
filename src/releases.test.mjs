@@ -12,7 +12,7 @@ import {
   writeReleasesJson,
 } from './releases.mjs';
 
-const ROOT = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 test('loadReleases reads the catalog and keeps known tags without browsers', () => {
   const releases = loadReleases(path.join(ROOT, 'playwright-releases.json'));

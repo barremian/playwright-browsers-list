@@ -11,7 +11,7 @@ import {
 } from './generate-pages.mjs';
 import { normalizeRelease } from './releases.mjs';
 
-const ROOT = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const FIXTURE = [
   {

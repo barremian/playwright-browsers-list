@@ -2,7 +2,7 @@
 // Reads playwright-releases.json and writes a standalone index.html:
 // one row per Playwright release, models.dev-style chrome.
 //
-// Usage: node generate-pages.mjs
+// Usage: node src/generate-pages.mjs
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -19,7 +19,7 @@ import {
 
 export { EXTRA_BROWSERS, compareVersions, parseVersion };
 
-const ROOT = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const RELEASES_FILE = path.join(ROOT, 'playwright-releases.json');
 const SITE_DIR = path.join(ROOT, '_site');
 const DOWNLOAD_REGISTRY = loadDownloadRegistry();

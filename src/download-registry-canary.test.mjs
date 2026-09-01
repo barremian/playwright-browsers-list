@@ -14,7 +14,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const ROOT = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const registry = loadDownloadRegistry();
 
 const FIXTURE_SOURCE = `
@@ -88,7 +88,7 @@ test('pinned registry matches the extractor snapshot of itself', () => {
 });
 
 test('legacy Chromium templates stay pinned to the v1.57.0 snapshot', () => {
-  const fixture = fs.readFileSync(path.join(ROOT, 'download-registry-v1.57-chromium.fixture.ts'), 'utf-8');
+  const fixture = fs.readFileSync(path.join(ROOT, 'src/fixtures/download-registry-v1.57-chromium.js'), 'utf-8');
   assert.deepEqual(registry.legacyPathTemplates, extractLegacyChromiumTemplates(fixture));
   assert.match(registry.legacySource, /v1\.57\.0/);
   assert.match(registry.legacyPathTemplates.chromium['mac15-arm64'], /builds\/chromium\/%s\/chromium-mac-arm64\.zip/);

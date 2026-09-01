@@ -1,15 +1,14 @@
 {
-  "name": "playwright-versions",
+  "name": "playwright-browsers-list",
   "version": "0.0.1",
   "description": "List of the browser versions supported by Playwright releases.",
-  "main": "index.mjs",
   "scripts": {
-    "update": "node update-browsers-list.mjs",
-    "update:dry-run": "node update-browsers-list.mjs --dry-run",
-    "pages": "node generate-pages.mjs",
+    "update": "node src/update-browsers-list.mjs",
+    "update:dry-run": "node src/update-browsers-list.mjs --dry-run",
+    "pages": "node src/generate-pages.mjs",
     "serve": "pnpm pages && http-server _site -c-1 -o",
-    "test": "node --test generate-pages.test.mjs download-urls.test.mjs download-registry-canary.test.mjs releases.test.mjs",
-    "test:canary": "DOWNLOAD_CANARY=1 node --test download-registry-canary.test.mjs"
+    "test": "node --test src/**/*.test.mjs",
+    "test:canary": "DOWNLOAD_CANARY=1 node --test src/download-registry-canary.test.mjs"
   },
   "keywords": [
     "playwright",
