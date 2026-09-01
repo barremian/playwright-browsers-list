@@ -7,10 +7,22 @@
     "update": "node update-browsers-list.mjs",
     "update:dry-run": "node update-browsers-list.mjs --dry-run",
     "pages": "node generate-pages.mjs",
+    "serve": "pnpm pages && http-server _site -c-1 -o",
     "test": "node --test generate-pages.test.mjs"
   },
-  "keywords": ["playwright", "browsers", "versions", "chromium", "firefox", "webkit"],
+  "keywords": [
+    "playwright",
+    "browsers",
+    "versions",
+    "chromium",
+    "firefox",
+    "webkit"
+  ],
   "author": "Aniruthan Mala Elangovan (Barremian) <hello@barremian.com>",
   "license": "AGPL-3.0-only",
-  "type": "module"
+  "type": "module",
+  "packageManager": "pnpm@11.24.0",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
 }
