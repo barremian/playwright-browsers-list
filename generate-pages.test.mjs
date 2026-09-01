@@ -122,6 +122,8 @@ test('writes a models.dev-style index from the browsers table', () => {
   assert.match(html, /class="icon-link"/);
   assert.match(html, /aria-label="GitHub repository"/);
   assert.match(html, /cdn\.jsdelivr\.net\/npm\/simple-icons@16\.24\.1\/icons\/github\.svg/);
+  assert.match(html, /cdn\.jsdelivr\.net\/npm\/lucide-static@1\.39\.0\/icons\/toolbox\.svg/);
+  assert.match(html, /id="extras"[\s\S]*icon-toolbox[\s\S]*>\s*Tools\s*<\/button>/);
   assert.match(html, /cdn\.jsdelivr\.net\/npm\/lucide-static@1\.39\.0\/icons\/sun\.svg/);
   assert.match(html, /cdn\.jsdelivr\.net\/npm\/lucide-static@1\.39\.0\/icons\/moon\.svg/);
   assert.match(html, /cdn\.jsdelivr\.net\/npm\/lucide-static@1\.39\.0\/icons\/monitor\.svg/);

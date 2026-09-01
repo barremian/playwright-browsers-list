@@ -488,7 +488,12 @@ function renderHtml({ releases, versionCount, latest }) {
       font-size: 0.8125rem;
       cursor: pointer;
     }
-    .extras { color: var(--muted); }
+    .extras {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--muted);
+    }
     .extras[aria-pressed="true"] {
       background: var(--accent);
       color: var(--invert);
@@ -511,6 +516,7 @@ function renderHtml({ releases, versionCount, latest }) {
       mask: var(--icon) center / contain no-repeat;
     }
     .icon-github { --icon: url("${GITHUB_ICON}"); }
+    .icon-toolbox { --icon: url("${LUCIDE_ICON('toolbox')}"); }
     .icon-sun { --icon: url("${LUCIDE_ICON('sun')}"); }
     .icon-moon { --icon: url("${LUCIDE_ICON('moon')}"); }
     .icon-monitor { --icon: url("${LUCIDE_ICON('monitor')}"); }
@@ -669,7 +675,10 @@ function renderHtml({ releases, versionCount, latest }) {
         <span class="visually-hidden">Filter releases</span>
         <input type="search" id="filter" placeholder="Filter versions…" autocomplete="off">
       </label>
-      <button type="button" class="extras" id="extras" aria-pressed="false">Tools</button>
+      <button type="button" class="extras" id="extras" aria-pressed="false">
+        <span class="icon icon-toolbox" aria-hidden="true"></span>
+        Tools
+      </button>
       <a class="icon-link" href="${REPO_URL}" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
         <span class="icon icon-github" aria-hidden="true"></span>
       </a>
