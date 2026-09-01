@@ -1,0 +1,5135 @@
+[
+  {
+    "tag": "v0.10.0",
+    "createdAt": "2020-01-31",
+    "browsers": {}
+  },
+  {
+    "tag": "v0.11.0",
+    "createdAt": "2020-02-13",
+    "browsers": {}
+  },
+  {
+    "tag": "v0.11.1",
+    "createdAt": "2020-02-14",
+    "browsers": {}
+  },
+  {
+    "tag": "v0.12.0",
+    "createdAt": "2020-03-24",
+    "browsers": {}
+  },
+  {
+    "tag": "v0.12.1",
+    "createdAt": "2020-03-24",
+    "browsers": {}
+  },
+  {
+    "tag": "v0.13.0",
+    "createdAt": "2020-04-08",
+    "browsers": {}
+  },
+  {
+    "tag": "v0.14.0",
+    "createdAt": "2020-04-22",
+    "browsers": {}
+  },
+  {
+    "tag": "v0.15.0",
+    "createdAt": "2020-04-23",
+    "browsers": {}
+  },
+  {
+    "tag": "v0.16.0",
+    "createdAt": "2020-04-30",
+    "browsers": {
+      "chromium": {
+        "revision": "763809"
+      },
+      "firefox": {
+        "revision": "1088"
+      },
+      "webkit": {
+        "revision": "1213"
+      }
+    }
+  },
+  {
+    "tag": "v0.17.0",
+    "createdAt": "2020-05-04",
+    "browsers": {
+      "chromium": {
+        "revision": "764964"
+      },
+      "firefox": {
+        "revision": "1089"
+      },
+      "webkit": {
+        "revision": "1216"
+      }
+    }
+  },
+  {
+    "tag": "v0.18.0",
+    "createdAt": "2020-05-05",
+    "browsers": {
+      "chromium": {
+        "revision": "764964"
+      },
+      "firefox": {
+        "revision": "1089"
+      },
+      "webkit": {
+        "revision": "1219"
+      }
+    }
+  },
+  {
+    "tag": "v1.0.0",
+    "createdAt": "2020-05-05",
+    "browsers": {
+      "chromium": {
+        "revision": "764964"
+      },
+      "firefox": {
+        "revision": "1089"
+      },
+      "webkit": {
+        "revision": "1219"
+      }
+    }
+  },
+  {
+    "tag": "v1.0.1",
+    "createdAt": "2020-05-06",
+    "browsers": {
+      "chromium": {
+        "revision": "764964"
+      },
+      "firefox": {
+        "revision": "1089"
+      },
+      "webkit": {
+        "revision": "1219"
+      }
+    }
+  },
+  {
+    "tag": "v1.0.2",
+    "createdAt": "2020-05-14",
+    "browsers": {
+      "chromium": {
+        "revision": "764964"
+      },
+      "firefox": {
+        "revision": "1089"
+      },
+      "webkit": {
+        "revision": "1219"
+      }
+    }
+  },
+  {
+    "tag": "v1.1.0",
+    "createdAt": "2020-06-09",
+    "browsers": {
+      "chromium": {
+        "revision": "775089"
+      },
+      "firefox": {
+        "revision": "1106"
+      },
+      "webkit": {
+        "revision": "1269"
+      }
+    }
+  },
+  {
+    "tag": "v1.1.1",
+    "createdAt": "2020-06-10",
+    "browsers": {
+      "chromium": {
+        "revision": "775089"
+      },
+      "firefox": {
+        "revision": "1106"
+      },
+      "webkit": {
+        "revision": "1269"
+      }
+    }
+  },
+  {
+    "tag": "v1.2.0",
+    "createdAt": "2020-07-06",
+    "browsers": {
+      "chromium": {
+        "revision": "782078"
+      },
+      "firefox": {
+        "revision": "1122"
+      },
+      "webkit": {
+        "revision": "1301"
+      }
+    }
+  },
+  {
+    "tag": "v1.2.1",
+    "createdAt": "2020-07-13",
+    "browsers": {
+      "chromium": {
+        "revision": "782078"
+      },
+      "firefox": {
+        "revision": "1122"
+      },
+      "webkit": {
+        "revision": "1301"
+      }
+    }
+  },
+  {
+    "tag": "v1.3.0",
+    "createdAt": "2020-08-05",
+    "browsers": {
+      "chromium": {
+        "revision": "792639"
+      },
+      "firefox": {
+        "revision": "1144"
+      },
+      "webkit": {
+        "revision": "1322"
+      }
+    }
+  },
+  {
+    "tag": "v1.4.0",
+    "createdAt": "2020-09-10",
+    "browsers": {
+      "chromium": {
+        "revision": "799411"
+      },
+      "firefox": {
+        "revision": "1171"
+      },
+      "webkit": {
+        "revision": "1343"
+      }
+    }
+  },
+  {
+    "tag": "v1.4.1",
+    "createdAt": "2020-09-18",
+    "browsers": {
+      "chromium": {
+        "revision": "799411"
+      },
+      "firefox": {
+        "revision": "1171"
+      },
+      "webkit": {
+        "revision": "1343"
+      }
+    }
+  },
+  {
+    "tag": "v1.4.2",
+    "createdAt": "2020-09-23",
+    "browsers": {
+      "chromium": {
+        "revision": "799411"
+      },
+      "firefox": {
+        "revision": "1171"
+      },
+      "webkit": {
+        "revision": "1343"
+      }
+    }
+  },
+  {
+    "tag": "v1.5.0",
+    "createdAt": "2020-10-12",
+    "browsers": {
+      "chromium": {
+        "revision": "815036"
+      },
+      "firefox": {
+        "revision": "1188"
+      },
+      "webkit": {
+        "revision": "1347"
+      }
+    }
+  },
+  {
+    "tag": "v1.5.1",
+    "createdAt": "2020-10-14",
+    "browsers": {
+      "chromium": {
+        "revision": "815036"
+      },
+      "firefox": {
+        "revision": "1188"
+      },
+      "webkit": {
+        "revision": "1347"
+      }
+    }
+  },
+  {
+    "tag": "v1.5.2",
+    "createdAt": "2020-10-27",
+    "browsers": {
+      "chromium": {
+        "revision": "815036"
+      },
+      "firefox": {
+        "revision": "1188"
+      },
+      "webkit": {
+        "revision": "1347"
+      }
+    }
+  },
+  {
+    "tag": "v1.6.0",
+    "createdAt": "2020-11-12",
+    "browsers": {
+      "chromium": {
+        "revision": "823944"
+      },
+      "firefox": {
+        "revision": "1205"
+      },
+      "webkit": {
+        "revision": "1383"
+      }
+    }
+  },
+  {
+    "tag": "v1.6.1",
+    "createdAt": "2020-11-12",
+    "browsers": {
+      "chromium": {
+        "revision": "823944"
+      },
+      "firefox": {
+        "revision": "1205"
+      },
+      "webkit": {
+        "revision": "1383"
+      }
+    }
+  },
+  {
+    "tag": "v1.6.2",
+    "createdAt": "2020-11-16",
+    "browsers": {
+      "chromium": {
+        "revision": "827102"
+      },
+      "firefox": {
+        "revision": "1205"
+      },
+      "webkit": {
+        "revision": "1383"
+      }
+    }
+  },
+  {
+    "tag": "v1.7.0",
+    "createdAt": "2020-12-15",
+    "browsers": {
+      "chromium": {
+        "revision": "833159"
+      },
+      "firefox": {
+        "revision": "1221"
+      },
+      "webkit": {
+        "revision": "1402"
+      }
+    }
+  },
+  {
+    "tag": "v1.7.1",
+    "createdAt": "2020-12-21",
+    "browsers": {
+      "chromium": {
+        "revision": "833159"
+      },
+      "firefox": {
+        "revision": "1221"
+      },
+      "webkit": {
+        "revision": "1402"
+      }
+    }
+  },
+  {
+    "tag": "v1.8.0",
+    "createdAt": "2021-01-21",
+    "browsers": {
+      "chromium": {
+        "revision": "844399"
+      },
+      "firefox": {
+        "revision": "1225"
+      },
+      "webkit": {
+        "revision": "1423"
+      }
+    }
+  },
+  {
+    "tag": "v1.8.1",
+    "createdAt": "2021-02-10",
+    "browsers": {
+      "chromium": {
+        "revision": "844399"
+      },
+      "firefox": {
+        "revision": "1225"
+      },
+      "webkit": {
+        "revision": "1423"
+      }
+    }
+  },
+  {
+    "tag": "v1.9.0",
+    "createdAt": "2021-02-22",
+    "browsers": {
+      "chromium": {
+        "revision": "854489"
+      },
+      "firefox": {
+        "revision": "1234"
+      },
+      "webkit": {
+        "revision": "1438"
+      },
+      "ffmpeg": {
+        "revision": "1005"
+      }
+    }
+  },
+  {
+    "tag": "v1.9.1",
+    "createdAt": "2021-02-24",
+    "browsers": {
+      "chromium": {
+        "revision": "854489"
+      },
+      "firefox": {
+        "revision": "1234"
+      },
+      "webkit": {
+        "revision": "1438"
+      },
+      "ffmpeg": {
+        "revision": "1005"
+      }
+    }
+  },
+  {
+    "tag": "v1.9.2",
+    "createdAt": "2021-03-09",
+    "browsers": {
+      "chromium": {
+        "revision": "854489"
+      },
+      "firefox": {
+        "revision": "1234"
+      },
+      "webkit": {
+        "revision": "1438"
+      },
+      "ffmpeg": {
+        "revision": "1005"
+      }
+    }
+  },
+  {
+    "tag": "v1.10.0",
+    "createdAt": "2021-03-23",
+    "browsers": {
+      "chromium": {
+        "revision": "857950",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1238",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1446",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1443"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.11.0",
+    "createdAt": "2021-05-06",
+    "browsers": {
+      "chromium": {
+        "revision": "878941",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1250",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1472",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1443"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.11.1",
+    "createdAt": "2021-05-19",
+    "browsers": {
+      "chromium": {
+        "revision": "878941",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1250",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1472",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1443"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.12.0",
+    "createdAt": "2021-06-08",
+    "browsers": {
+      "chromium": {
+        "revision": "888113",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1269",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1492",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.12.1",
+    "createdAt": "2021-06-09",
+    "browsers": {
+      "chromium": {
+        "revision": "888113",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1269",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1492",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.12.2",
+    "createdAt": "2021-06-11",
+    "browsers": {
+      "chromium": {
+        "revision": "888113",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1271",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1492",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.12.3",
+    "createdAt": "2021-06-25",
+    "browsers": {
+      "chromium": {
+        "revision": "888113",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1271",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1492",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.13.0",
+    "createdAt": "2021-07-21",
+    "browsers": {
+      "chromium": {
+        "revision": "901522",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1278",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1516",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.13.1",
+    "createdAt": "2021-07-28",
+    "browsers": {
+      "chromium": {
+        "revision": "901522",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1278",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1516",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.14.0",
+    "createdAt": "2021-08-13",
+    "browsers": {
+      "chromium": {
+        "revision": "907428",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1281",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1530",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.14.1",
+    "createdAt": "2021-08-24",
+    "browsers": {
+      "chromium": {
+        "revision": "907428",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1281",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1530",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.15.0",
+    "createdAt": "2021-09-16",
+    "browsers": {
+      "chromium": {
+        "revision": "920619",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1295",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1542",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.15.1",
+    "createdAt": "2021-09-30",
+    "browsers": {
+      "chromium": {
+        "revision": "920619",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1295",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1550",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.15.2",
+    "createdAt": "2021-10-05",
+    "browsers": {
+      "chromium": {
+        "revision": "920619",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1295",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1550",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1005",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.16.0",
+    "createdAt": "2021-10-20",
+    "browsers": {
+      "chromium": {
+        "revision": "930007",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1297",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1564",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1006",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.16.1",
+    "createdAt": "2021-10-22",
+    "browsers": {
+      "chromium": {
+        "revision": "930007",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1297",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1564",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1006",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.16.2",
+    "createdAt": "2021-10-27",
+    "browsers": {
+      "chromium": {
+        "revision": "930007",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1297",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1564",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1006",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.16.3",
+    "createdAt": "2021-11-01",
+    "browsers": {
+      "chromium": {
+        "revision": "930007",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1297",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1564",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1006",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.17.0-rc1",
+    "createdAt": "2021-11-17",
+    "browsers": {
+      "chromium": {
+        "revision": "939194",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1304",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1578",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1006",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.17.0",
+    "createdAt": "2021-11-30",
+    "browsers": {
+      "chromium": {
+        "revision": "939194",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1304",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1578",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1006",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.17.1",
+    "createdAt": "2021-12-01",
+    "browsers": {
+      "chromium": {
+        "revision": "939194",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1304",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1578",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1006",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.17.2",
+    "createdAt": "2022-01-09",
+    "browsers": {
+      "chromium": {
+        "revision": "939194",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1304",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1578",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1006",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.18.0-rc1",
+    "createdAt": "2022-01-14",
+    "browsers": {
+      "chromium": {
+        "revision": "956323",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1313",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1596",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.18.0",
+    "createdAt": "2022-01-19",
+    "browsers": {
+      "chromium": {
+        "revision": "956323",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1313",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1596",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.18.1",
+    "createdAt": "2022-01-27",
+    "browsers": {
+      "chromium": {
+        "revision": "956323",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1313",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1596",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.19.0",
+    "createdAt": "2022-02-11",
+    "browsers": {
+      "chromium": {
+        "revision": "965416",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1316",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1609",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.19.1",
+    "createdAt": "2022-02-15",
+    "browsers": {
+      "chromium": {
+        "revision": "965416",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1316",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1609",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.19.2",
+    "createdAt": "2022-02-23",
+    "browsers": {
+      "chromium": {
+        "revision": "965416",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1316",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1609",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.20.0",
+    "createdAt": "2022-03-14",
+    "browsers": {
+      "chromium": {
+        "revision": "978106",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1319",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1616",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.20.1",
+    "createdAt": "2022-03-23",
+    "browsers": {
+      "chromium": {
+        "revision": "978106",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1319",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1616",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.20.2",
+    "createdAt": "2022-03-31",
+    "browsers": {
+      "chromium": {
+        "revision": "978106",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1319",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1616",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.21.0",
+    "createdAt": "2022-04-11",
+    "browsers": {
+      "chromium": {
+        "revision": "1000",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1322",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1630",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.21.1",
+    "createdAt": "2022-04-18",
+    "browsers": {
+      "chromium": {
+        "revision": "1000",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1322",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1630",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.22.0",
+    "createdAt": "2022-05-12",
+    "browsers": {
+      "chromium": {
+        "revision": "1005",
+        "browserVersion": "102.0.5005.40",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1323",
+        "browserVersion": "99.0.1",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1641",
+        "browserVersion": "15.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.22.1",
+    "createdAt": "2022-05-17",
+    "browsers": {
+      "chromium": {
+        "revision": "1005",
+        "browserVersion": "102.0.5005.40",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1323",
+        "browserVersion": "99.0.1",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1641",
+        "browserVersion": "15.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.22.2",
+    "createdAt": "2022-05-20",
+    "browsers": {
+      "chromium": {
+        "revision": "1005",
+        "browserVersion": "102.0.5005.40",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1323",
+        "browserVersion": "99.0.1",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1641",
+        "browserVersion": "15.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.23.0",
+    "createdAt": "2022-06-27",
+    "browsers": {
+      "chromium": {
+        "revision": "1012",
+        "browserVersion": "104.0.5112.20",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1327",
+        "browserVersion": "100.0.2",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1668",
+        "browserVersion": "15.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.23.1",
+    "createdAt": "2022-06-30",
+    "browsers": {
+      "chromium": {
+        "revision": "1012",
+        "browserVersion": "104.0.5112.20",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1327",
+        "browserVersion": "100.0.2",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1668",
+        "browserVersion": "15.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.23.2",
+    "createdAt": "2022-07-07",
+    "browsers": {
+      "chromium": {
+        "revision": "1012",
+        "browserVersion": "104.0.5112.20",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1327",
+        "browserVersion": "100.0.2",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1668",
+        "browserVersion": "15.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.23.3",
+    "createdAt": "2022-07-13",
+    "browsers": {
+      "chromium": {
+        "revision": "1012",
+        "browserVersion": "104.0.5112.20",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1327",
+        "browserVersion": "100.0.2",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1668",
+        "browserVersion": "15.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.23.4",
+    "createdAt": "2022-07-15",
+    "browsers": {
+      "chromium": {
+        "revision": "1012",
+        "browserVersion": "104.0.5112.20",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1327",
+        "browserVersion": "100.0.2",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1668",
+        "browserVersion": "15.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.24.0",
+    "createdAt": "2022-07-21",
+    "browsers": {
+      "chromium": {
+        "revision": "1015",
+        "browserVersion": "104.0.5112.48",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1335",
+        "browserVersion": "102.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1683",
+        "browserVersion": "16.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.24.1",
+    "createdAt": "2022-07-26",
+    "browsers": {
+      "chromium": {
+        "revision": "1015",
+        "browserVersion": "104.0.5112.48",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1335",
+        "browserVersion": "102.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1683",
+        "browserVersion": "16.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.24.2",
+    "createdAt": "2022-07-29",
+    "browsers": {
+      "chromium": {
+        "revision": "1015",
+        "browserVersion": "104.0.5112.48",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1335",
+        "browserVersion": "102.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1683",
+        "browserVersion": "16.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.25.0",
+    "createdAt": "2022-08-10",
+    "browsers": {
+      "chromium": {
+        "revision": "1019",
+        "browserVersion": "105.0.5195.19",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1344",
+        "browserVersion": "103.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1699",
+        "browserVersion": "16.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.25.1",
+    "createdAt": "2022-08-23",
+    "browsers": {
+      "chromium": {
+        "revision": "1019",
+        "browserVersion": "105.0.5195.19",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1344",
+        "browserVersion": "103.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1699",
+        "browserVersion": "16.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.25.2",
+    "createdAt": "2022-09-06",
+    "browsers": {
+      "chromium": {
+        "revision": "1019",
+        "browserVersion": "105.0.5195.19",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1344",
+        "browserVersion": "103.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1699",
+        "browserVersion": "16.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.26.0",
+    "createdAt": "2022-09-19",
+    "browsers": {
+      "chromium": {
+        "revision": "1024",
+        "browserVersion": "106.0.5249.30",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1350",
+        "browserVersion": "104.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1715",
+        "browserVersion": "16.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.26.1",
+    "createdAt": "2022-09-26",
+    "browsers": {
+      "chromium": {
+        "revision": "1024",
+        "browserVersion": "106.0.5249.30",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1350",
+        "browserVersion": "104.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1715",
+        "browserVersion": "16.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.27.0",
+    "createdAt": "2022-10-07",
+    "browsers": {
+      "chromium": {
+        "revision": "1028",
+        "browserVersion": "107.0.5304.18",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1357",
+        "browserVersion": "105.0.1",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1724",
+        "browserVersion": "16.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.27.1",
+    "createdAt": "2022-10-11",
+    "browsers": {
+      "chromium": {
+        "revision": "1028",
+        "browserVersion": "107.0.5304.18",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1357",
+        "browserVersion": "105.0.1",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1724",
+        "browserVersion": "16.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1007",
+        "installByDefault": true
+      }
+    }
+  },
+  {
+    "tag": "v1.28.0",
+    "createdAt": "2022-11-15",
+    "browsers": {
+      "chromium": {
+        "revision": "1033",
+        "browserVersion": "108.0.5359.29",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1364",
+        "browserVersion": "106.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1735",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.28.1",
+    "createdAt": "2022-11-22",
+    "browsers": {
+      "chromium": {
+        "revision": "1033",
+        "browserVersion": "108.0.5359.29",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1364",
+        "browserVersion": "106.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1735",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.29.0",
+    "createdAt": "2022-12-16",
+    "browsers": {
+      "chromium": {
+        "revision": "1040",
+        "browserVersion": "109.0.5414.46",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1369",
+        "browserVersion": "107.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1751",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.29.1",
+    "createdAt": "2022-12-21",
+    "browsers": {
+      "chromium": {
+        "revision": "1041",
+        "browserVersion": "109.0.5414.46",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1369",
+        "browserVersion": "107.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1751",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.29.2",
+    "createdAt": "2023-01-05",
+    "browsers": {
+      "chromium": {
+        "revision": "1041",
+        "browserVersion": "109.0.5414.46",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1369",
+        "browserVersion": "107.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1751",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.30.0",
+    "createdAt": "2023-01-24",
+    "browsers": {
+      "chromium": {
+        "revision": "1045",
+        "browserVersion": "110.0.5481.38",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1372",
+        "browserVersion": "108.0.2",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1767",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.31.0",
+    "createdAt": "2023-02-21",
+    "browsers": {
+      "chromium": {
+        "revision": "1048",
+        "browserVersion": "111.0.5563.19",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1378",
+        "browserVersion": "109.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1792",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.31.1",
+    "createdAt": "2023-02-22",
+    "browsers": {
+      "chromium": {
+        "revision": "1048",
+        "browserVersion": "111.0.5563.19",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "win64": "1050"
+        }
+      },
+      "firefox": {
+        "revision": "1378",
+        "browserVersion": "109.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1792",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.31.2",
+    "createdAt": "2023-03-02",
+    "browsers": {
+      "chromium": {
+        "revision": "1048",
+        "browserVersion": "111.0.5563.19",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "win64": "1050"
+        }
+      },
+      "firefox": {
+        "revision": "1378",
+        "browserVersion": "109.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1792",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.32.0",
+    "createdAt": "2023-03-22",
+    "browsers": {
+      "chromium": {
+        "revision": "1055",
+        "browserVersion": "112.0.5615.29",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1391",
+        "browserVersion": "111.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1811",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.32.1",
+    "createdAt": "2023-03-24",
+    "browsers": {
+      "chromium": {
+        "revision": "1055",
+        "browserVersion": "112.0.5615.29",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1391",
+        "browserVersion": "111.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1811",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.32.2",
+    "createdAt": "2023-04-03",
+    "browsers": {
+      "chromium": {
+        "revision": "1055",
+        "browserVersion": "112.0.5615.29",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1391",
+        "browserVersion": "111.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1811",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.32.3",
+    "createdAt": "2023-04-10",
+    "browsers": {
+      "chromium": {
+        "revision": "1055",
+        "browserVersion": "112.0.5615.29",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1391",
+        "browserVersion": "111.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1811",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.33.0",
+    "createdAt": "2023-04-26",
+    "browsers": {
+      "chromium": {
+        "revision": "1060",
+        "browserVersion": "113.0.5672.53",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1403",
+        "browserVersion": "112.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1837",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1008",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.34.0",
+    "createdAt": "2023-05-19",
+    "browsers": {
+      "chromium": {
+        "revision": "1064",
+        "browserVersion": "114.0.5735.35",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1408",
+        "browserVersion": "113.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1848",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.34.1",
+    "createdAt": "2023-05-22",
+    "browsers": {
+      "chromium": {
+        "revision": "1064",
+        "browserVersion": "114.0.5735.35",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1408",
+        "browserVersion": "113.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1848",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.34.2",
+    "createdAt": "2023-05-23",
+    "browsers": {
+      "chromium": {
+        "revision": "1064",
+        "browserVersion": "114.0.5735.35",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1408",
+        "browserVersion": "113.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1848",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.34.3",
+    "createdAt": "2023-05-24",
+    "browsers": {
+      "chromium": {
+        "revision": "1064",
+        "browserVersion": "114.0.5735.35",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1408",
+        "browserVersion": "113.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1848",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.35.0",
+    "createdAt": "2023-06-08",
+    "browsers": {
+      "chromium": {
+        "revision": "1067",
+        "browserVersion": "115.0.5790.24",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1408",
+        "browserVersion": "113.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1860",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.35.1",
+    "createdAt": "2023-06-14",
+    "browsers": {
+      "chromium": {
+        "revision": "1067",
+        "browserVersion": "115.0.5790.24",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1408",
+        "browserVersion": "113.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1860",
+        "browserVersion": "16.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.36.0",
+    "createdAt": "2023-07-10",
+    "browsers": {
+      "chromium": {
+        "revision": "1071",
+        "browserVersion": "115.0.5790.75",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1419",
+        "browserVersion": "115.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1869",
+        "browserVersion": "17.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.36.1",
+    "createdAt": "2023-07-14",
+    "browsers": {
+      "chromium": {
+        "revision": "1071",
+        "browserVersion": "115.0.5790.75",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1419",
+        "browserVersion": "115.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1869",
+        "browserVersion": "17.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.36.2",
+    "createdAt": "2023-07-24",
+    "browsers": {
+      "chromium": {
+        "revision": "1071",
+        "browserVersion": "115.0.5790.75",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1419",
+        "browserVersion": "115.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1869",
+        "browserVersion": "17.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.37.0",
+    "createdAt": "2023-08-10",
+    "browsers": {
+      "chromium": {
+        "revision": "1076",
+        "browserVersion": "116.0.5845.82",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1422",
+        "browserVersion": "115.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1883",
+        "browserVersion": "17.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.37.1",
+    "createdAt": "2023-08-17",
+    "browsers": {
+      "chromium": {
+        "revision": "1076",
+        "browserVersion": "116.0.5845.82",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1422",
+        "browserVersion": "115.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1883",
+        "browserVersion": "17.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.38.0",
+    "createdAt": "2023-09-13",
+    "browsers": {
+      "chromium": {
+        "revision": "1080",
+        "browserVersion": "117.0.5938.62",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1424",
+        "browserVersion": "117.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1908",
+        "browserVersion": "17.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.38.1",
+    "createdAt": "2023-09-21",
+    "browsers": {
+      "chromium": {
+        "revision": "1080",
+        "browserVersion": "117.0.5938.62",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1424",
+        "browserVersion": "117.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1908",
+        "browserVersion": "17.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.39.0",
+    "createdAt": "2023-10-11",
+    "browsers": {
+      "chromium": {
+        "revision": "1084",
+        "browserVersion": "119.0.6045.9",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1425",
+        "browserVersion": "118.0.1",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1921",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.40.0",
+    "createdAt": "2023-11-16",
+    "browsers": {
+      "chromium": {
+        "revision": "1091",
+        "browserVersion": "120.0.6099.28",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1429",
+        "browserVersion": "119.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1944",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04-x64": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.40.1",
+    "createdAt": "2023-11-28",
+    "browsers": {
+      "chromium": {
+        "revision": "1091",
+        "browserVersion": "120.0.6099.28",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1429",
+        "browserVersion": "119.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1944",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04-x64": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.41.0",
+    "createdAt": "2024-01-16",
+    "browsers": {
+      "chromium": {
+        "revision": "1097",
+        "browserVersion": "121.0.6167.57",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1438",
+        "browserVersion": "121.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1967",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04-x64": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.41.1",
+    "createdAt": "2024-01-20",
+    "browsers": {
+      "chromium": {
+        "revision": "1097",
+        "browserVersion": "121.0.6167.57",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1438",
+        "browserVersion": "121.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1967",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04-x64": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.41.2",
+    "createdAt": "2024-02-01",
+    "browsers": {
+      "chromium": {
+        "revision": "1097",
+        "browserVersion": "121.0.6167.57",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1438",
+        "browserVersion": "121.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1967",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "ubuntu18.04-x64": "1728"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.42.0",
+    "createdAt": "2024-02-27",
+    "browsers": {
+      "chromium": {
+        "revision": "1105",
+        "browserVersion": "123.0.6312.4",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1440",
+        "browserVersion": "123.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1983",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.42.1",
+    "createdAt": "2024-03-01",
+    "browsers": {
+      "chromium": {
+        "revision": "1105",
+        "browserVersion": "123.0.6312.4",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1440",
+        "browserVersion": "123.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1983",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.43.0",
+    "createdAt": "2024-04-04",
+    "browsers": {
+      "chromium": {
+        "revision": "1112",
+        "browserVersion": "124.0.6367.29",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1447",
+        "browserVersion": "124.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1992",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.43.1",
+    "createdAt": "2024-04-12",
+    "browsers": {
+      "chromium": {
+        "revision": "1112",
+        "browserVersion": "124.0.6367.29",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1447",
+        "browserVersion": "124.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "1992",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.44.0",
+    "createdAt": "2024-05-06",
+    "browsers": {
+      "chromium": {
+        "revision": "1117",
+        "browserVersion": "125.0.6422.26",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1449",
+        "browserVersion": "125.0.1",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2003",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.44.1",
+    "createdAt": "2024-05-23",
+    "browsers": {
+      "chromium": {
+        "revision": "1117",
+        "browserVersion": "125.0.6422.26",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1449",
+        "browserVersion": "125.0.1",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2003",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.45.0",
+    "createdAt": "2024-06-24",
+    "browsers": {
+      "chromium": {
+        "revision": "1124",
+        "browserVersion": "127.0.6533.17",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1454",
+        "browserVersion": "127.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2035",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.45.1",
+    "createdAt": "2024-07-02",
+    "browsers": {
+      "chromium": {
+        "revision": "1124",
+        "browserVersion": "127.0.6533.17",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1454",
+        "browserVersion": "127.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2035",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.45.2",
+    "createdAt": "2024-07-16",
+    "browsers": {
+      "chromium": {
+        "revision": "1124",
+        "browserVersion": "127.0.6533.17",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1454",
+        "browserVersion": "127.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2035",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.45.3",
+    "createdAt": "2024-07-22",
+    "browsers": {
+      "chromium": {
+        "revision": "1124",
+        "browserVersion": "127.0.6533.17",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1454",
+        "browserVersion": "127.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2035",
+        "browserVersion": "17.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1000",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.46.0",
+    "createdAt": "2024-08-05",
+    "browsers": {
+      "chromium": {
+        "revision": "1129",
+        "browserVersion": "128.0.6613.18",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1458",
+        "browserVersion": "128.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2051",
+        "browserVersion": "18.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.46.1",
+    "createdAt": "2024-08-16",
+    "browsers": {
+      "chromium": {
+        "revision": "1129",
+        "browserVersion": "128.0.6613.18",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1458",
+        "browserVersion": "128.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2051",
+        "browserVersion": "18.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1009",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.47.0",
+    "createdAt": "2024-09-05",
+    "browsers": {
+      "chromium": {
+        "revision": "1134",
+        "browserVersion": "129.0.6668.29",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1463",
+        "browserVersion": "130.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2070",
+        "browserVersion": "18.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1010",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.47.1",
+    "createdAt": "2024-09-13",
+    "browsers": {
+      "chromium": {
+        "revision": "1134",
+        "browserVersion": "129.0.6668.29",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1463",
+        "browserVersion": "130.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2070",
+        "browserVersion": "18.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1010",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.47.2",
+    "createdAt": "2024-09-20",
+    "browsers": {
+      "chromium": {
+        "revision": "1134",
+        "browserVersion": "129.0.6668.29",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1463",
+        "browserVersion": "130.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2070",
+        "browserVersion": "18.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1010",
+        "installByDefault": true
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.48.0",
+    "createdAt": "2024-10-08",
+    "browsers": {
+      "chromium": {
+        "revision": "1140",
+        "browserVersion": "130.0.6723.31",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1465",
+        "browserVersion": "131.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2083",
+        "browserVersion": "18.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1010",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.48.1",
+    "createdAt": "2024-10-16",
+    "browsers": {
+      "chromium": {
+        "revision": "1140",
+        "browserVersion": "130.0.6723.31",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1465",
+        "browserVersion": "131.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2083",
+        "browserVersion": "18.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1010",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.48.2",
+    "createdAt": "2024-10-25",
+    "browsers": {
+      "chromium": {
+        "revision": "1140",
+        "browserVersion": "130.0.6723.31",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1465",
+        "browserVersion": "131.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2083",
+        "browserVersion": "18.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1010",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.49.0",
+    "createdAt": "2024-11-18",
+    "browsers": {
+      "chromium": {
+        "revision": "1148",
+        "browserVersion": "131.0.6778.33",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1148",
+        "browserVersion": "131.0.6778.33",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1466",
+        "browserVersion": "132.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2104",
+        "browserVersion": "18.2",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1010",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.49.1",
+    "createdAt": "2024-12-09",
+    "browsers": {
+      "chromium": {
+        "revision": "1148",
+        "browserVersion": "131.0.6778.33",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1148",
+        "browserVersion": "131.0.6778.33",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1466",
+        "browserVersion": "132.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2104",
+        "browserVersion": "18.2",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1010",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.50.0",
+    "createdAt": "2025-01-23",
+    "browsers": {
+      "chromium": {
+        "revision": "1155",
+        "browserVersion": "133.0.6943.16",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1471",
+        "browserVersion": "134.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2123",
+        "browserVersion": "18.2",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.50.1",
+    "createdAt": "2025-01-31",
+    "browsers": {
+      "chromium": {
+        "revision": "1155",
+        "browserVersion": "133.0.6943.16",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1471",
+        "browserVersion": "134.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2123",
+        "browserVersion": "18.2",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.51.0",
+    "createdAt": "2025-03-06",
+    "browsers": {
+      "chromium": {
+        "revision": "1161",
+        "browserVersion": "134.0.6998.35",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1161",
+        "browserVersion": "134.0.6998.35",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1475",
+        "browserVersion": "135.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2140",
+        "browserVersion": "18.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.51.1",
+    "createdAt": "2025-03-17",
+    "browsers": {
+      "chromium": {
+        "revision": "1161",
+        "browserVersion": "134.0.6998.35",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1161",
+        "browserVersion": "134.0.6998.35",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1475",
+        "browserVersion": "135.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2140",
+        "browserVersion": "18.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.52.0",
+    "createdAt": "2025-04-17",
+    "browsers": {
+      "chromium": {
+        "revision": "1169",
+        "browserVersion": "136.0.7103.25",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1169",
+        "browserVersion": "136.0.7103.25",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1482",
+        "browserVersion": "137.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2158",
+        "browserVersion": "18.4",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.53.0",
+    "createdAt": "2025-06-10",
+    "browsers": {
+      "chromium": {
+        "revision": "1178",
+        "browserVersion": "138.0.7204.15",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1178",
+        "browserVersion": "138.0.7204.15",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1487",
+        "browserVersion": "139.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2182",
+        "browserVersion": "18.5",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.53.1",
+    "createdAt": "2025-06-18",
+    "browsers": {
+      "chromium": {
+        "revision": "1179",
+        "browserVersion": "138.0.7204.23",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1179",
+        "browserVersion": "138.0.7204.23",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1488",
+        "browserVersion": "139.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2182",
+        "browserVersion": "18.5",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.53.2",
+    "createdAt": "2025-06-30",
+    "browsers": {
+      "chromium": {
+        "revision": "1179",
+        "browserVersion": "138.0.7204.23",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1179",
+        "browserVersion": "138.0.7204.23",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1488",
+        "browserVersion": "139.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2182",
+        "browserVersion": "18.5",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.54.0",
+    "createdAt": "2025-07-09",
+    "browsers": {
+      "chromium": {
+        "revision": "1181",
+        "browserVersion": "139.0.7258.5",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1181",
+        "browserVersion": "139.0.7258.5",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1489",
+        "browserVersion": "140.0.2",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2191",
+        "browserVersion": "26.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.54.1",
+    "createdAt": "2025-07-11",
+    "browsers": {
+      "chromium": {
+        "revision": "1181",
+        "browserVersion": "139.0.7258.5",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1181",
+        "browserVersion": "139.0.7258.5",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1489",
+        "browserVersion": "140.0.2",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2191",
+        "browserVersion": "26.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.54.2",
+    "createdAt": "2025-08-01",
+    "browsers": {
+      "chromium": {
+        "revision": "1181",
+        "browserVersion": "139.0.7258.5",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1181",
+        "browserVersion": "139.0.7258.5",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1489",
+        "browserVersion": "140.0.2",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2191",
+        "browserVersion": "26.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.55.0",
+    "createdAt": "2025-08-20",
+    "browsers": {
+      "chromium": {
+        "revision": "1187",
+        "browserVersion": "140.0.7339.16",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1187",
+        "browserVersion": "140.0.7339.16",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1490",
+        "browserVersion": "141.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2203",
+        "browserVersion": "26.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.55.1",
+    "createdAt": "2025-09-23",
+    "browsers": {
+      "chromium": {
+        "revision": "1193",
+        "browserVersion": "140.0.7339.186",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1193",
+        "browserVersion": "140.0.7339.186",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1490",
+        "browserVersion": "141.0",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2203",
+        "browserVersion": "26.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.56.0",
+    "createdAt": "2025-10-06",
+    "browsers": {
+      "chromium": {
+        "revision": "1194",
+        "browserVersion": "141.0.7390.37",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1194",
+        "browserVersion": "141.0.7390.37",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1495",
+        "browserVersion": "142.0.1",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2215",
+        "browserVersion": "26.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.56.1",
+    "createdAt": "2025-10-16",
+    "browsers": {
+      "chromium": {
+        "revision": "1194",
+        "browserVersion": "141.0.7390.37",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1194",
+        "browserVersion": "141.0.7390.37",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1495",
+        "browserVersion": "142.0.1",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2215",
+        "browserVersion": "26.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.57.0",
+    "createdAt": "2025-11-25",
+    "browsers": {
+      "chromium": {
+        "revision": "1200",
+        "browserVersion": "143.0.7499.4",
+        "installByDefault": true
+      },
+      "chromium-headless-shell": {
+        "revision": "1200",
+        "browserVersion": "143.0.7499.4",
+        "installByDefault": true
+      },
+      "firefox": {
+        "revision": "1497",
+        "browserVersion": "144.0.2",
+        "installByDefault": true
+      },
+      "webkit": {
+        "revision": "2227",
+        "browserVersion": "26.0",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "mac10.14": "1446",
+          "mac10.15": "1616",
+          "mac11": "1816",
+          "mac11-arm64": "1816",
+          "mac12": "2009",
+          "mac12-arm64": "2009",
+          "mac13": "2140",
+          "mac13-arm64": "2140",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.58.0",
+    "createdAt": "2026-01-23",
+    "browsers": {
+      "chromium": {
+        "revision": "1208",
+        "browserVersion": "145.0.7632.6",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1208",
+        "browserVersion": "145.0.7632.6",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1509",
+        "browserVersion": "146.0.1",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2248",
+        "browserVersion": "26.0",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.58.1",
+    "createdAt": "2026-01-30",
+    "browsers": {
+      "chromium": {
+        "revision": "1208",
+        "browserVersion": "145.0.7632.6",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1208",
+        "browserVersion": "145.0.7632.6",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1509",
+        "browserVersion": "146.0.1",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2248",
+        "browserVersion": "26.0",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.58.2",
+    "createdAt": "2026-02-06",
+    "browsers": {
+      "chromium": {
+        "revision": "1208",
+        "browserVersion": "145.0.7632.6",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1208",
+        "browserVersion": "145.0.7632.6",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1509",
+        "browserVersion": "146.0.1",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2248",
+        "browserVersion": "26.0",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.59.0",
+    "createdAt": "2026-03-31",
+    "browsers": {
+      "chromium": {
+        "revision": "1217",
+        "browserVersion": "147.0.7727.15",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1217",
+        "browserVersion": "147.0.7727.15",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1511",
+        "browserVersion": "148.0.2",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2272",
+        "browserVersion": "26.4",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "mac14": "2251",
+          "mac14-arm64": "2251",
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.59.1",
+    "createdAt": "2026-04-01",
+    "browsers": {
+      "chromium": {
+        "revision": "1217",
+        "browserVersion": "147.0.7727.15",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1217",
+        "browserVersion": "147.0.7727.15",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1511",
+        "browserVersion": "148.0.2",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2272",
+        "browserVersion": "26.4",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "mac14": "2251",
+          "mac14-arm64": "2251",
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.60.0",
+    "createdAt": "2026-05-11",
+    "browsers": {
+      "chromium": {
+        "revision": "1223",
+        "browserVersion": "148.0.7778.96",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1223",
+        "browserVersion": "148.0.7778.96",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1522",
+        "browserVersion": "150.0.2",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2287",
+        "browserVersion": "26.4",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "mac14": "2251",
+          "mac14-arm64": "2251",
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.61.0",
+    "createdAt": "2026-06-15",
+    "browsers": {
+      "chromium": {
+        "revision": "1228",
+        "browserVersion": "149.0.7827.55",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1228",
+        "browserVersion": "149.0.7827.55",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1532",
+        "browserVersion": "151.0",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2311",
+        "browserVersion": "26.5",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "mac14": "2251",
+          "mac14-arm64": "2251",
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.61.1",
+    "createdAt": "2026-06-22",
+    "browsers": {
+      "chromium": {
+        "revision": "1228",
+        "browserVersion": "149.0.7827.55",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1228",
+        "browserVersion": "149.0.7827.55",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1532",
+        "browserVersion": "151.0",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2311",
+        "browserVersion": "26.5",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "mac14": "2251",
+          "mac14-arm64": "2251",
+          "debian11-x64": "2105",
+          "debian11-arm64": "2105",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true,
+        "revisionOverrides": {
+          "mac12": "1010",
+          "mac12-arm64": "1010"
+        }
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.62.0",
+    "createdAt": "2026-07-24",
+    "browsers": {
+      "chromium": {
+        "revision": "1234",
+        "browserVersion": "151.0.7922.34",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1234",
+        "browserVersion": "151.0.7922.34",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1538",
+        "browserVersion": "153.0",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2336",
+        "browserVersion": "26.5",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "mac14": "2251",
+          "mac14-arm64": "2251",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.62.1",
+    "createdAt": "2026-07-29",
+    "browsers": {
+      "chromium": {
+        "revision": "1234",
+        "browserVersion": "151.0.7922.34",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1234",
+        "browserVersion": "151.0.7922.34",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1538",
+        "browserVersion": "153.0",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2336",
+        "browserVersion": "26.5",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "mac14": "2251",
+          "mac14-arm64": "2251",
+          "ubuntu20.04-x64": "2092",
+          "ubuntu20.04-arm64": "2092"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  }
+]

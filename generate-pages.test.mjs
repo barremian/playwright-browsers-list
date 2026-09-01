@@ -8,76 +8,64 @@ import {
   compareVersions,
   generatePages,
   markChanges,
-  parseBrowsersTable,
 } from './generate-pages.mjs';
+import { normalizeRelease } from './releases.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 
-const FIXTURE = `<table>
-  <thead>
-    <tr>
-      <th>version</th>
-      <th>property</th>
-      <th>chromium</th>
-      <th>firefox</th>
-      <th>webkit</th>
-      <th>ffmpeg</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowspan="5"><strong>v1.0.0</strong></td>
-      <td>revision</td>
-      <td>100</td><td>200</td><td>300</td><td>9</td>
-    </tr>
-    <tr>
-      <td>browserVersion</td>
-      <td>-</td><td>-</td><td>-</td><td>-</td>
-    </tr>
-    <tr>
-      <td>installByDefault</td>
-      <td>true</td><td>true</td><td>true</td><td>false</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>-</td><td>-</td><td>-</td><td>-</td>
-    </tr>
-    <tr>
-      <td>revisionOverrides</td>
-      <td>-</td><td>-</td><td>-</td><td>-</td>
-    </tr>
-    <tr>
-      <td rowspan="5"><strong>v1.2.0</strong></td>
-      <td>revision</td>
-      <td>110</td><td>200</td><td>310</td><td>9</td>
-    </tr>
-    <tr>
-      <td>browserVersion</td>
-      <td>120.0.1</td><td>99.0</td><td>16.0</td><td>-</td>
-    </tr>
-    <tr>
-      <td>installByDefault</td>
-      <td>true</td><td>true</td><td>true</td><td>false</td>
-    </tr>
-    <tr>
-      <td>title</td>
-      <td>Chrome for Testing</td><td>Firefox</td><td>WebKit</td><td>-</td>
-    </tr>
-    <tr>
-      <td>revisionOverrides</td>
-      <td>-</td><td>-</td><td><ul><li>mac12: 300</li><li>ubuntu20.04-x64: 301</li></ul></td><td>-</td>
-    </tr>
-  </tbody>
-</table>
-`;
+const FIXTURE = [
+  {
+    tag: 'v1.0.0',
+    createdAt: '2020-05-05',
+    browsers: {
+      chromium: { revision: '100', installByDefault: true },
+      firefox: { revision: '200', installByDefault: true },
+      webkit: { revision: '300', installByDefault: true },
+      ffmpeg: { revision: '9', installByDefault: false },
+    },
+  },
+  {
+    tag: 'v1.2.0',
+    createdAt: '2020-07-06',
+    browsers: {
+      chromium: {
+        revision: '110',
+        browserVersion: '120.0.1',
+        installByDefault: true,
+        title: 'Chrome for Testing',
+      },
+      firefox: {
+        revision: '200',
+        browserVersion: '99.0',
+        installByDefault: true,
+        title: 'Firefox',
+      },
+      webkit: {
+        revision: '310',
+        browserVersion: '16.0',
+        installByDefault: true,
+        title: 'WebKit',
+        revisionOverrides: {
+          mac12: '300',
+          'ubuntu20.04-x64': '301',
+        },
+      },
+      ffmpeg: { revision: '9', installByDefault: false },
+    },
+  },
+];
+
+function fixtureReleases() {
+  return FIXTURE.map(normalizeRelease);
+}
 
 test('compareVersions orders prereleases before the matching release', () => {
   assert.ok(compareVersions('v1.2.0-beta.1', 'v1.2.0') < 0);
   assert.ok(compareVersions('v1.10.0', 'v1.2.0') > 0);
 });
 
-test('parseBrowsersTable reads one release per rowspan group', () => {
-  const releases = parseBrowsersTable(FIXTURE);
+test('normalizeRelease reads object overrides and omits empty browsers', () => {
+  const releases = fixtureReleases();
   assert.equal(releases.length, 2);
   assert.equal(releases[0].version, 'v1.0.0');
   assert.equal(releases[1].browsers.chromium.browserVersion, '120.0.1');
@@ -91,7 +79,9 @@ test('parseBrowsersTable reads one release per rowspan group', () => {
 });
 
 test('markChanges compares each release to the next older one', () => {
-  const releases = markChanges([...parseBrowsersTable(FIXTURE)].reverse());
+  const releases = markChanges(
+    [...fixtureReleases()].sort((a, b) => compareVersions(b.version, a.version)),
+  );
   assert.equal(releases[0].version, 'v1.2.0');
   assert.equal(releases[0].browsers.chromium.changed, true);
   assert.equal(releases[0].browsers.firefox.changed, true);
@@ -99,10 +89,10 @@ test('markChanges compares each release to the next older one', () => {
   assert.equal(releases[1].browsers.chromium.changed, false);
 });
 
-test('writes a models.dev-style index from the browsers table', () => {
+test('writes a models.dev-style index from the releases catalog', () => {
   const siteDir = fs.mkdtempSync(path.join(os.tmpdir(), 'pages-'));
   const output = generatePages({
-    tableFile: path.join(ROOT, 'playwright-browsers-list.md'),
+    releasesFile: path.join(ROOT, 'playwright-releases.json'),
     siteDir,
   });
 
@@ -168,6 +158,7 @@ test('writes a models.dev-style index from the browsers table', () => {
   assert.match(html, /builds\/firefox\/1538\//);
   assert.doesNotMatch(html, /<td rowspan=/);
   assert.equal(html.indexOf('v1.62.1') < html.indexOf('v0.16.0'), true);
+  assert.doesNotMatch(html, /v0\.10\.0/);
   assert.match(html, /class="[^"]*\bextra\b/);
   assert.equal((html.match(/<tr class="release"/g) ?? []).length, 157);
   assert.equal(fs.readFileSync(path.join(siteDir, '.nojekyll'), 'utf-8'), '');
@@ -175,10 +166,10 @@ test('writes a models.dev-style index from the browsers table', () => {
 
 test('renders one row per fixture release, newest first, with extras hidden by class', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'pages-fixture-'));
-  const tableFile = path.join(dir, 'table.md');
-  fs.writeFileSync(tableFile, FIXTURE);
+  const releasesFile = path.join(dir, 'releases.json');
+  fs.writeFileSync(releasesFile, `${JSON.stringify(FIXTURE, null, 2)}\n`);
   const siteDir = path.join(dir, '_site');
-  const html = fs.readFileSync(generatePages({ tableFile, siteDir }), 'utf-8');
+  const html = fs.readFileSync(generatePages({ releasesFile, siteDir }), 'utf-8');
 
   assert.match(html, /2 releases · latest v1\.2\.0/);
   assert.equal((html.match(/<tr class="release"/g) ?? []).length, 2);
@@ -198,12 +189,12 @@ test('renders one row per fixture release, newest first, with extras hidden by c
   assert.match(html, /\.rev \{ padding-left: 0\.4rem; \}/);
 });
 
-test('rejects a source file that is not an HTML table', () => {
+test('rejects a source file that is not a releases array', () => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'pages-bad-'));
-  const tableFile = path.join(dir, 'not-a-table.md');
-  fs.writeFileSync(tableFile, '# hello\n');
+  const releasesFile = path.join(dir, 'not-releases.json');
+  fs.writeFileSync(releasesFile, '{"hello":true}\n');
   assert.throws(
-    () => generatePages({ tableFile, siteDir: path.join(dir, '_site') }),
-    /does not contain an HTML table/,
+    () => generatePages({ releasesFile, siteDir: path.join(dir, '_site') }),
+    /is not a JSON array/,
   );
 });

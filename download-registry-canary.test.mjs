@@ -8,7 +8,8 @@ import {
   loadDownloadRegistry,
 } from './download-registry.mjs';
 import { representativeDownloadUrls } from './download-urls.mjs';
-import { parseBrowsersTable, compareVersions } from './generate-pages.mjs';
+import { compareVersions } from './generate-pages.mjs';
+import { loadReleases, releaseHasBrowsers } from './releases.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -116,8 +117,9 @@ test('Playwright download contract still matches microsoft/playwright', async t 
       : '',
   );
 
-  const table = fs.readFileSync(path.join(ROOT, 'playwright-browsers-list.md'), 'utf-8');
-  const latest = [...parseBrowsersTable(table)].sort((a, b) => compareVersions(b.version, a.version))[0];
+  const latest = loadReleases(path.join(ROOT, 'playwright-releases.json'))
+    .filter(releaseHasBrowsers)
+    .sort((a, b) => compareVersions(b.version, a.version))[0];
   const urls = representativeDownloadUrls(latest, registry);
   assert.ok(urls.length, `no representative download URLs for ${latest.version}`);
 

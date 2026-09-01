@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-// Parses playwright-browsers-list.md (an HTML property matrix) and writes a
-// standalone index.html: one row per Playwright release, models.dev-style chrome.
+// Reads playwright-releases.json and writes a standalone index.html:
+// one row per Playwright release, models.dev-style chrome.
 //
 // Usage: node generate-pages.mjs
 
@@ -9,17 +9,24 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadDownloadRegistry } from './download-registry.mjs';
 import { downloadLinks } from './download-urls.mjs';
+import {
+  EXTRA_BROWSERS,
+  compareVersions,
+  loadReleases,
+  parseVersion,
+  releaseHasBrowsers,
+} from './releases.mjs';
+
+export { EXTRA_BROWSERS, compareVersions, parseVersion };
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
-const TABLE_FILE = path.join(ROOT, 'playwright-browsers-list.md');
+const RELEASES_FILE = path.join(ROOT, 'playwright-releases.json');
 const SITE_DIR = path.join(ROOT, '_site');
 const DOWNLOAD_REGISTRY = loadDownloadRegistry();
 
 const REPO_URL = 'https://github.com/barremian/playwright-browsers-list';
 const LUCIDE_ICON = name => `https://cdn.jsdelivr.net/npm/lucide-static@1.39.0/icons/${name}.svg`;
 const GITHUB_ICON = 'https://cdn.jsdelivr.net/npm/simple-icons@16.24.1/icons/github.svg';
-
-export const EXTRA_BROWSERS = new Set(['ffmpeg', 'winldd', 'android']);
 
 const BROWSER_LABELS = {
   chromium: 'Chromium',
@@ -31,14 +38,10 @@ const BROWSER_LABELS = {
   android: 'android',
 };
 
-export function generatePages({ tableFile = TABLE_FILE, siteDir = SITE_DIR } = {}) {
-  const source = fs.readFileSync(tableFile, 'utf-8');
-  if (!source.includes('<table>') || !source.includes('</table>'))
-    throw new Error(`${tableFile} does not contain an HTML table`);
-
-  const releases = parseBrowsersTable(source);
+export function generatePages({ releasesFile = RELEASES_FILE, siteDir = SITE_DIR } = {}) {
+  const releases = loadReleases(releasesFile).filter(releaseHasBrowsers);
   if (!releases.length)
-    throw new Error(`${tableFile} does not contain any Playwright releases`);
+    throw new Error(`${releasesFile} does not contain any Playwright releases`);
 
   const newestFirst = [...releases].sort((a, b) => compareVersions(b.version, a.version));
   markChanges(newestFirst);
@@ -55,92 +58,6 @@ export function generatePages({ tableFile = TABLE_FILE, siteDir = SITE_DIR } = {
   return path.join(siteDir, 'index.html');
 }
 
-export function parseVersion(tag) {
-  const match = String(tag).match(/^v?(\d+)\.(\d+)\.(\d+)(?:-(.+))?$/);
-  if (!match)
-    return null;
-  const [, major, minor, patch, prerelease] = match;
-  return { major: +major, minor: +minor, patch: +patch, prerelease: prerelease ?? null };
-}
-
-export function compareVersions(tagA, tagB) {
-  const a = parseVersion(tagA);
-  const b = parseVersion(tagB);
-  if (!a || !b)
-    return String(tagA).localeCompare(String(tagB));
-  if (a.major !== b.major)
-    return a.major - b.major;
-  if (a.minor !== b.minor)
-    return a.minor - b.minor;
-  if (a.patch !== b.patch)
-    return a.patch - b.patch;
-  if (a.prerelease === b.prerelease)
-    return 0;
-  if (a.prerelease === null)
-    return 1;
-  if (b.prerelease === null)
-    return -1;
-  return a.prerelease.localeCompare(b.prerelease);
-}
-
-export function parseBrowsersTable(html) {
-  const tableMatch = html.match(/<table>[\s\S]*<\/table>/);
-  if (!tableMatch)
-    throw new Error('could not find an HTML table');
-
-  const table = tableMatch[0];
-  const head = table.match(/<thead>[\s\S]*?<\/thead>/);
-  const body = table.match(/<tbody>[\s\S]*?<\/tbody>/);
-  if (!head || !body)
-    throw new Error('table is missing thead or tbody');
-
-  const headers = [...head[0].matchAll(/<th>([^<]*)<\/th>/g)].map(match => match[1].trim());
-  const browsers = headers.slice(2);
-  if (!browsers.length)
-    throw new Error('table has no browser columns');
-
-  const rows = extractRows(body[0]);
-  const releases = [];
-
-  for (let index = 0; index < rows.length; ) {
-    const first = rows[index];
-    const versionCell = first.find(cell => cell.rowspan);
-    if (!versionCell) {
-      index += 1;
-      continue;
-    }
-
-    const rowspan = versionCell.rowspan;
-    const group = rows.slice(index, index + rowspan);
-    index += rowspan;
-
-    const properties = {};
-    for (const cells of group) {
-      const property = (cells[0].rowspan ? cells[1] : cells[0])?.text;
-      if (!property)
-        continue;
-      const values = cells.slice(cells[0].rowspan ? 2 : 1);
-      properties[property] = Object.fromEntries(browsers.map((name, i) => [name, values[i]?.text ?? '-']));
-    }
-
-    const version = stripTags(versionCell.text).trim();
-    releases.push({
-      version,
-      browsers: Object.fromEntries(browsers.map(name => [name, {
-        name,
-        extra: EXTRA_BROWSERS.has(name),
-        revision: blankToNull(properties.revision?.[name]),
-        browserVersion: blankToNull(properties.browserVersion?.[name]),
-        installByDefault: parseBoolean(properties.installByDefault?.[name]),
-        title: blankToNull(properties.title?.[name]),
-        revisionOverrides: parseOverrides(properties.revisionOverrides?.[name] ?? ''),
-      }])),
-    });
-  }
-
-  return releases;
-}
-
 export function markChanges(releasesNewestFirst) {
   for (let index = 0; index < releasesNewestFirst.length; index += 1) {
     const current = releasesNewestFirst[index];
@@ -155,59 +72,6 @@ export function markChanges(releasesNewestFirst) {
 
 function browserFingerprint(browser) {
   return `${browser.browserVersion ?? ''}\0${browser.revision ?? ''}`;
-}
-
-function extractRows(tbody) {
-  return [...tbody.matchAll(/<tr>[\s\S]*?<\/tr>/g)].map(match => extractCells(match[0]));
-}
-
-function extractCells(rowHtml) {
-  const cells = [];
-  const td = /<td\b([^>]*)>([\s\S]*?)<\/td>/g;
-  let match;
-  while ((match = td.exec(rowHtml))) {
-    const attrs = match[1];
-    const rowspanMatch = attrs.match(/rowspan="(\d+)"/);
-    cells.push({
-      text: match[2].trim(),
-      rowspan: rowspanMatch ? Number(rowspanMatch[1]) : 0,
-    });
-  }
-  return cells;
-}
-
-function parseOverrides(html) {
-  if (!html || html === '-')
-    return [];
-  return [...html.matchAll(/<li>([\s\S]*?)<\/li>/g)].map(match => {
-    const text = stripTags(match[1]).trim();
-    const separator = text.indexOf(':');
-    if (separator === -1)
-      return { platform: text, revision: '' };
-    return {
-      platform: text.slice(0, separator).trim(),
-      revision: text.slice(separator + 1).trim(),
-    };
-  });
-}
-
-function parseBoolean(value) {
-  if (value === 'true')
-    return true;
-  if (value === 'false')
-    return false;
-  return null;
-}
-
-function blankToNull(value) {
-  if (value == null)
-    return null;
-  const text = stripTags(String(value)).trim();
-  return !text || text === '-' ? null : text;
-}
-
-function stripTags(value) {
-  return String(value).replace(/<[^>]+>/g, '');
 }
 
 function escapeHtml(value) {

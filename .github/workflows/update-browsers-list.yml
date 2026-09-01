@@ -46,8 +46,7 @@ jobs:
           delete-branch: true
           sign-commits: true
           add-paths: |
-            playwright-tags.json
-            playwright-browsers-list.md
+            playwright-releases.json
           commit-message: 'chore: update Playwright browser list'
           title: 'chore: update Playwright browser list'
           body: |
@@ -57,7 +56,7 @@ jobs:
             in `microsoft/playwright` drifted, the job fails before opening a pull request;
             update `playwright-download-registry.json` in that case.
 
-            Review the diff in `playwright-tags.json` and `playwright-browsers-list.md` before merging.
+            Review the diff in `playwright-releases.json` before merging.
 
             This pull request is created by the [Update browser list](../actions/workflows/update-browsers-list.yml) workflow.
 
