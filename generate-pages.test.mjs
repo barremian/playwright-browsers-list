@@ -115,6 +115,7 @@ test('writes a models.dev-style index from the browsers table', () => {
   assert.match(html, /github.com\/microsoft\/playwright/);
   assert.match(html, /playwright.dev\/docs\/browsers/);
   assert.match(html, /github.com\/barremian\/playwright-browsers-list/);
+  assert.match(html, /header h1 \{[\s\S]*text-overflow: ellipsis;/);
   assert.match(html, /class="icon-link"/);
   assert.match(html, /aria-label="GitHub repository"/);
   assert.match(html, /cdn\.jsdelivr\.net\/npm\/simple-icons@16\.24\.1\/icons\/github\.svg/);
