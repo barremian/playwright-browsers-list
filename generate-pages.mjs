@@ -15,6 +15,8 @@ const SITE_DIR = path.join(ROOT, '_site');
 const REPO_URL = 'https://github.com/barremian/playwright-browsers-list';
 const PLAYWRIGHT_URL = 'https://github.com/microsoft/playwright';
 const DOCS_URL = 'https://playwright.dev/docs/browsers';
+const LUCIDE_ICON = name => `https://cdn.jsdelivr.net/npm/lucide-static@1.39.0/icons/${name}.svg`;
+const GITHUB_ICON = 'https://cdn.jsdelivr.net/npm/simple-icons@16.24.1/icons/github.svg';
 
 export const EXTRA_BROWSERS = new Set(['ffmpeg', 'winldd', 'android']);
 
@@ -343,8 +345,9 @@ function renderHtml({ releases, versionCount, latest }) {
   <script>
     (() => {
       const stored = localStorage.getItem('theme');
-      const theme = stored === 'dark' || stored === 'light'
-        ? stored
+      const preference = stored === 'dark' || stored === 'light' || stored === 'system' ? stored : 'system';
+      const theme = preference === 'light' || preference === 'dark'
+        ? preference
         : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
       document.documentElement.dataset.theme = theme;
       if (localStorage.getItem('extras') === 'on')
@@ -486,29 +489,72 @@ function renderHtml({ releases, versionCount, latest }) {
       outline: none;
       background: var(--surface);
     }
-    .extras, .theme-switch button {
+    .extras, .icon-link {
       appearance: none;
       height: 2rem;
       padding: 0 0.75rem;
       border: 1px solid var(--line);
       border-radius: 0.25rem;
       background: transparent;
-      color: var(--muted);
+      color: var(--ink);
       font: inherit;
       font-size: 0.8125rem;
       cursor: pointer;
     }
+    .extras { color: var(--muted); }
     .extras[aria-pressed="true"] {
       background: var(--accent);
       color: var(--invert);
       border-color: var(--accent);
     }
+    .icon-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      padding: 0;
+    }
+    .icon-link:hover { color: var(--accent); }
+    .icon {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      background-color: currentColor;
+      -webkit-mask: var(--icon) center / contain no-repeat;
+      mask: var(--icon) center / contain no-repeat;
+    }
+    .icon-github { --icon: url("${GITHUB_ICON}"); }
+    .icon-sun { --icon: url("${LUCIDE_ICON('sun')}"); }
+    .icon-moon { --icon: url("${LUCIDE_ICON('moon')}"); }
+    .icon-monitor { --icon: url("${LUCIDE_ICON('monitor')}"); }
+    .theme-switch {
+      display: inline-flex;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 0.25rem;
+    }
+    .theme-switch button {
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      padding: 0;
+      border: 0;
+      border-right: 1px solid var(--line);
+      border-radius: 0;
+      background: transparent;
+      color: var(--ink);
+      cursor: pointer;
+    }
+    .theme-switch button:last-child { border-right: 0; }
+    .theme-switch button:hover { background: var(--surface); }
     .theme-switch button[aria-pressed="true"] {
       background: var(--ink);
       color: var(--invert);
-      border-color: var(--ink);
     }
-    .theme-switch { display: inline-flex; gap: 0.25rem; }
+    .theme-switch button[aria-pressed="true"]:hover { background: var(--ink); }
     .page-scroll {
       height: calc(100svh - var(--header-height));
       margin-top: var(--header-height);
@@ -634,16 +680,25 @@ function renderHtml({ releases, versionCount, latest }) {
       <nav class="top-nav" aria-label="Primary">
         <a href="${PLAYWRIGHT_URL}" target="_blank" rel="noopener noreferrer">Playwright</a>
         <a href="${DOCS_URL}" target="_blank" rel="noopener noreferrer">Docs</a>
-        <a href="${REPO_URL}" target="_blank" rel="noopener noreferrer">GitHub</a>
       </nav>
       <label>
         <span class="visually-hidden">Filter releases</span>
         <input type="search" id="filter" placeholder="Filter versions…" autocomplete="off">
       </label>
       <button type="button" class="extras" id="extras" aria-pressed="false">Tools</button>
+      <a class="icon-link" href="${REPO_URL}" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
+        <span class="icon icon-github" aria-hidden="true"></span>
+      </a>
       <div class="theme-switch" role="group" aria-label="Color theme">
-        <button type="button" data-theme-value="light">Light</button>
-        <button type="button" data-theme-value="dark">Dark</button>
+        <button type="button" data-theme-value="light" aria-label="Light">
+          <span class="icon icon-sun" aria-hidden="true"></span>
+        </button>
+        <button type="button" data-theme-value="dark" aria-label="Dark">
+          <span class="icon icon-moon" aria-hidden="true"></span>
+        </button>
+        <button type="button" data-theme-value="system" aria-label="System">
+          <span class="icon icon-monitor" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
   </header>
@@ -659,18 +714,31 @@ ${table}
     const root = document.documentElement;
     const themeButtons = document.querySelectorAll('[data-theme-value]');
     const extrasButton = document.getElementById('extras');
-    const applyTheme = theme => {
-      root.dataset.theme = theme;
+    const themeMedia = matchMedia('(prefers-color-scheme: dark)');
+    const themePreference = () => {
+      const stored = localStorage.getItem('theme');
+      return stored === 'dark' || stored === 'light' || stored === 'system' ? stored : 'system';
+    };
+    const resolveTheme = preference => (
+      preference === 'light' || preference === 'dark'
+        ? preference
+        : (themeMedia.matches ? 'dark' : 'light')
+    );
+    const applyTheme = preference => {
+      root.dataset.theme = resolveTheme(preference);
       for (const button of themeButtons) {
-        button.setAttribute('aria-pressed', String(button.dataset.themeValue === theme));
+        button.setAttribute('aria-pressed', String(button.dataset.themeValue === preference));
       }
     };
-    applyTheme(root.dataset.theme === 'dark' ? 'dark' : 'light');
+    applyTheme(themePreference());
+    themeMedia.addEventListener('change', () => {
+      if (themePreference() === 'system') applyTheme('system');
+    });
     for (const button of themeButtons) {
       button.addEventListener('click', () => {
-        const theme = button.dataset.themeValue;
-        localStorage.setItem('theme', theme);
-        applyTheme(theme);
+        const preference = button.dataset.themeValue;
+        localStorage.setItem('theme', preference);
+        applyTheme(preference);
       });
     }
 
