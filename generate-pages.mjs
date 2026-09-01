@@ -518,12 +518,14 @@ function renderHtml({ releases, versionCount, latest }) {
     table {
       border-collapse: separate;
       border-spacing: 0;
+      table-layout: fixed;
       width: 100%;
       min-width: 56rem;
       font-size: 0.875rem;
     }
     html:not([data-extras="on"]) .extra { display: none; }
-    html[data-extras="on"] table { min-width: 72rem; }
+    html[data-extras="on"] table { min-width: 76rem; }
+    .version-col, .version-cell { width: 10.5rem; }
     th, td {
       padding: 0.75rem;
       text-align: left;
