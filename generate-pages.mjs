@@ -337,7 +337,8 @@ function renderHtml({ releases, versionCount, latest }) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Playwright browsers list</title>
+  <title>Playwright Browsers</title>
+  <link rel="icon" href="${LUCIDE_ICON('drama')}" type="image/svg+xml">
   <link rel="preconnect" href="https://rsms.me/">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <script>
@@ -659,7 +660,7 @@ function renderHtml({ releases, versionCount, latest }) {
 <body>
   <header>
     <div class="left">
-      <a class="brand" href="./"><h1>Playwright browsers</h1></a>
+      <a class="brand" href="./"><h1>Playwright Browsers</h1></a>
       <span class="slash" aria-hidden="true"></span>
       <p class="tagline">${versionCount} releases · latest ${latestLabel}</p>
     </div>
