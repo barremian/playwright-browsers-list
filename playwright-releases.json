@@ -5131,5 +5131,51 @@
         "installByDefault": false
       }
     }
+  },
+  {
+    "tag": "v1.63.0",
+    "createdAt": "2026-09-04",
+    "browsers": {
+      "chromium": {
+        "revision": "1243",
+        "browserVersion": "153.0.8010.12",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1243",
+        "browserVersion": "153.0.8010.12",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1543",
+        "browserVersion": "155.0",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2359",
+        "browserVersion": "26.6",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "mac14": "2251",
+          "mac14-arm64": "2251"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1011",
+        "installByDefault": true
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
   }
 ]
