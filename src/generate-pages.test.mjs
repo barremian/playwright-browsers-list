@@ -160,7 +160,7 @@ test('writes a models.dev-style index from the releases catalog', () => {
   assert.equal(html.indexOf('v1.62.1') < html.indexOf('v0.16.0'), true);
   assert.doesNotMatch(html, /v0\.10\.0/);
   assert.match(html, /class="[^"]*\bextra\b/);
-  assert.equal((html.match(/<tr class="release"/g) ?? []).length, 157);
+  assert.equal((html.match(/<tr class="release"/g) ?? []).length, 158);
   assert.equal(fs.readFileSync(path.join(siteDir, '.nojekyll'), 'utf-8'), '');
 });
 

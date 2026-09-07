@@ -16,18 +16,16 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 test('loadReleases reads the catalog and keeps known tags without browsers', () => {
   const releases = loadReleases(path.join(ROOT, 'playwright-releases.json'));
-  assert.equal(releases.length, 165);
-  assert.equal(releases.filter(releaseHasBrowsers).length, 157);
+  assert.equal(releases.length, 166);
+  assert.equal(releases.filter(releaseHasBrowsers).length, 158);
   assert.equal(releases[0].version, 'v0.10.0');
   assert.deepEqual(releases[0].browsers, {});
   const latest = releases.at(-1);
-  assert.equal(latest.version, 'v1.62.1');
-  assert.equal(latest.browsers.chromium.browserVersion, '151.0.7922.34');
+  assert.equal(latest.version, 'v1.63.0');
+  assert.equal(latest.browsers.chromium.browserVersion, '153.0.8010.12');
   assert.deepEqual(latest.browsers.webkit.revisionOverrides, [
     { platform: 'mac14', revision: '2251' },
-    { platform: 'mac14-arm64', revision: '2251' },
-    { platform: 'ubuntu20.04-x64', revision: '2092' },
-    { platform: 'ubuntu20.04-arm64', revision: '2092' },
+    { platform: 'mac14-arm64', revision: '2251' }
   ]);
 });
 
