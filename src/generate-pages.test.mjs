@@ -9,7 +9,11 @@ import {
   generatePages,
   markChanges,
 } from './generate-pages.mjs';
-import { normalizeRelease } from './releases.mjs';
+import {
+  loadReleases,
+  normalizeRelease,
+  releaseHasBrowsers,
+} from './releases.mjs';
 
 const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -57,6 +61,16 @@ const FIXTURE = [
 
 function fixtureReleases() {
   return FIXTURE.map(normalizeRelease);
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function catalogNewestFirst(releasesFile = path.join(ROOT, 'playwright-releases.json')) {
+  return loadReleases(releasesFile)
+    .filter(releaseHasBrowsers)
+    .sort((a, b) => compareVersions(b.version, a.version));
 }
 
 test('compareVersions orders prereleases before the matching release', () => {
@@ -150,18 +164,63 @@ test('writes a models.dev-style index from the releases catalog', () => {
   assert.match(html, /\.table-wrap \{[\s\S]*overflow: auto;/);
   assert.match(html, /thead th \{[\s\S]*position: sticky;[\s\S]*top: 0;/);
   assert.ok(html.indexOf('id="empty"') < html.indexOf('class="table-wrap"'));
-  assert.match(html, /<strong>v1\.62\.1<\/strong>/);
-  assert.match(html, /151\.0\.7922\.34/);
+
+  const withBrowsers = catalogNewestFirst();
+  const latest = withBrowsers[0];
+  const oldest = withBrowsers.at(-1);
+  assert.ok(latest);
+  assert.match(html, new RegExp(`<strong>${escapeRegExp(latest.version)}</strong>`));
+  assert.match(html, new RegExp(`${withBrowsers.length} releases · latest ${escapeRegExp(latest.version)}`));
+  const chromiumVersion = latest.browsers.chromium?.browserVersion;
+  if (chromiumVersion)
+    assert.match(html, new RegExp(escapeRegExp(chromiumVersion)));
   assert.match(html, /Downloads/);
-  assert.match(html, /cdn\.playwright\.dev\/builds\/cft\/151\.0\.7922\.34\//);
-  assert.match(html, /builds\/chromium\/1200\/chromium-linux\.zip/);
-  assert.match(html, /builds\/firefox\/1538\//);
+  if (latest.browsers.chromium?.title === 'Chrome for Testing' && chromiumVersion) {
+    assert.match(
+      html,
+      new RegExp(`cdn\\.playwright\\.dev/builds/cft/${escapeRegExp(chromiumVersion)}/`),
+    );
+  }
   assert.doesNotMatch(html, /<td rowspan=/);
-  assert.equal(html.indexOf('v1.62.1') < html.indexOf('v0.16.0'), true);
+  assert.ok(html.indexOf(latest.version) < html.indexOf(oldest.version));
   assert.doesNotMatch(html, /v0\.10\.0/);
   assert.match(html, /class="[^"]*\bextra\b/);
-  assert.equal((html.match(/<tr class="release"/g) ?? []).length, 158);
+  assert.equal((html.match(/<tr class="release"/g) ?? []).length, withBrowsers.length);
   assert.equal(fs.readFileSync(path.join(siteDir, '.nojekyll'), 'utf-8'), '');
+});
+
+test('catalog page invariants still hold after a newer Playwright tag is added', () => {
+  const catalog = JSON.parse(fs.readFileSync(path.join(ROOT, 'playwright-releases.json'), 'utf-8'));
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'pages-new-tag-'));
+  const releasesFile = path.join(dir, 'releases.json');
+  fs.writeFileSync(releasesFile, `${JSON.stringify([
+    ...catalog,
+    {
+      tag: 'v99.0.0',
+      createdAt: '2099-01-01',
+      browsers: {
+        chromium: {
+          revision: '9999',
+          browserVersion: '999.0.0.1',
+          installByDefault: true,
+          title: 'Chrome for Testing',
+        },
+      },
+    },
+  ], null, 2)}\n`);
+
+  const html = fs.readFileSync(generatePages({
+    releasesFile,
+    siteDir: path.join(dir, '_site'),
+  }), 'utf-8');
+  const withBrowsers = catalogNewestFirst(releasesFile);
+  assert.equal(withBrowsers[0].version, 'v99.0.0');
+  assert.match(html, /<strong>v99\.0\.0<\/strong>/);
+  assert.match(html, /999\.0\.0\.1/);
+  assert.match(html, new RegExp(`${withBrowsers.length} releases · latest v99\\.0\\.0`));
+  assert.equal((html.match(/<tr class="release"/g) ?? []).length, withBrowsers.length);
+  assert.ok(html.indexOf('v99.0.0') < html.indexOf(withBrowsers.at(-1).version));
+  assert.doesNotMatch(html, /v0\.10\.0/);
 });
 
 test('renders one row per fixture release, newest first, with extras hidden by class', () => {
