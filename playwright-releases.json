@@ -5269,5 +5269,97 @@
         "installByDefault": false
       }
     }
+  },
+  {
+    "tag": "v1.65.0",
+    "createdAt": "2026-11-05",
+    "browsers": {
+      "chromium": {
+        "revision": "1254",
+        "browserVersion": "158.0.8127.18",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1254",
+        "browserVersion": "158.0.8127.18",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1572",
+        "browserVersion": "159.0",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2388",
+        "browserVersion": "27.2",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "mac14": "2251",
+          "mac14-arm64": "2251"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1013",
+        "installByDefault": true
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
+  },
+  {
+    "tag": "v1.65.1",
+    "createdAt": "2026-11-13",
+    "browsers": {
+      "chromium": {
+        "revision": "1255",
+        "browserVersion": "159.0.8154.6",
+        "installByDefault": true,
+        "title": "Chrome for Testing"
+      },
+      "chromium-headless-shell": {
+        "revision": "1255",
+        "browserVersion": "159.0.8154.6",
+        "installByDefault": true,
+        "title": "Chrome Headless Shell"
+      },
+      "firefox": {
+        "revision": "1572",
+        "browserVersion": "159.0",
+        "installByDefault": true,
+        "title": "Firefox"
+      },
+      "webkit": {
+        "revision": "2388",
+        "browserVersion": "27.2",
+        "installByDefault": true,
+        "title": "WebKit",
+        "revisionOverrides": {
+          "mac14": "2251",
+          "mac14-arm64": "2251"
+        }
+      },
+      "ffmpeg": {
+        "revision": "1013",
+        "installByDefault": true
+      },
+      "winldd": {
+        "revision": "1007",
+        "installByDefault": false
+      },
+      "android": {
+        "revision": "1001",
+        "installByDefault": false
+      }
+    }
   }
 ]
